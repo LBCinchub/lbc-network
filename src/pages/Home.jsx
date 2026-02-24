@@ -102,13 +102,15 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-12 lg:mt-16"
           >
-            <Button
-              size="lg"
-              className="group relative bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white border-0 px-8 py-6 text-base font-medium rounded-full transition-all duration-300 shadow-lg shadow-violet-500/20 hover:shadow-violet-500/30 hover:scale-[1.02]"
-            >
-              Explore Platforms
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Button>
+            <a href="https://lbchub.io" target="_blank" rel="noopener noreferrer">
+              <Button
+                size="lg"
+                className="group relative bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white border-0 px-8 py-6 text-base font-medium rounded-full transition-all duration-300 shadow-lg shadow-violet-500/20 hover:shadow-violet-500/30 hover:scale-[1.02]"
+              >
+                Explore Platforms
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Button>
+            </a>
           </motion.div>
         </div>
       </section>
