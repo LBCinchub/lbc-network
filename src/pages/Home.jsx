@@ -54,12 +54,14 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Button 
-                variant="ghost" 
-                className="text-white/70 hover:text-white hover:bg-white/5 transition-colors"
-              >
-                Contact
-              </Button>
+              <a href="https://lbchub.support" target="_blank" rel="noopener noreferrer">
+                <Button 
+                  variant="ghost" 
+                  className="text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                >
+                  Contact
+                </Button>
+              </a>
             </motion.div>
           </div>
         </div>
