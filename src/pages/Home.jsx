@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight } from 'lucide-react';
+import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -22,6 +22,24 @@ export default function Home() {
       title: "Driver Portal",
       description: "Logistics & delivery network",
       href: "#driver"
+    },
+    {
+      icon: Cpu,
+      title: "LBCOS",
+      description: "Our proprietary software platform",
+      href: "#lbcos"
+    },
+    {
+      icon: Smartphone,
+      title: "Hardware",
+      description: "Next-generation connected devices",
+      href: "#hardware"
+    },
+    {
+      icon: Sparkles,
+      title: "Lumina AI",
+      description: "Your intelligent digital twin",
+      href: "#lumina"
     }
   ];
 
@@ -134,7 +152,7 @@ export default function Home() {
               Core Services
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {services.map((service, index) => (
                 <motion.a
                   key={service.title}
