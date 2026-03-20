@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles } from 'lucide-react';
+import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
     {
       icon: Cpu,
       title: "LBCOS",
-      description: "Our proprietary software platform",
+      description: "Advanced phone operating system",
       href: "#lbcos"
     },
     {
@@ -34,6 +34,12 @@ export default function Home() {
       title: "Hardware",
       description: "Next-generation connected devices",
       href: "#hardware"
+    },
+    {
+      icon: Plane,
+      title: "Hub Travel",
+      description: "Complete travel booking service",
+      href: "#hub-travel"
     },
     {
       icon: Sparkles,
