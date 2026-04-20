@@ -9,7 +9,7 @@ export default function FloatingChat() {
     {
       id: 1,
       role: 'assistant',
-      content: 'Hey! 👋 I\'m Lumina AI. Ask me anything about LBC Network, our services, or our ecosystem!'
+      content: 'Hey! 👋 I\'m LBC AI. Ask me anything about LBC Network, our services, or our ecosystem!'
     }
   ]);
   const [input, setInput] = useState('');
@@ -40,7 +40,7 @@ export default function FloatingChat() {
 
     try {
       const response = await base44.integrations.Core.InvokeLLM({
-        prompt: `You are Lumina AI, the intelligent digital assistant for LBC Network. You help users understand our services and ecosystem.
+        prompt: `You are LBC AI, the intelligent digital assistant for LBC Network. You help users understand our services and ecosystem.
 
 LBC Network Services:
 - Wallet: Secure digital transactions
@@ -115,7 +115,7 @@ Respond concisely and helpfully, staying in character as Lumina AI.`,
             <div className="bg-gradient-to-r from-violet-600/20 to-blue-600/20 border-b border-white/10 px-4 py-4">
               <h3 className="text-white font-semibold flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                Lumina AI
+                LBC AI
               </h3>
               <p className="text-white/40 text-xs mt-1">Ask about LBC Network</p>
             </div>
