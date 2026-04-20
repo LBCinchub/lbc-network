@@ -40,42 +40,25 @@ export default function FloatingChat() {
 
     try {
       const response = await base44.integrations.Core.InvokeLLM({
-        prompt: `You are LBC AI, the intelligent digital assistant for LBC Network. You help users understand our ecosystem, family tree, vision, and services.
+        prompt: `You are LBC AI, the intelligent digital assistant for LBC Network. Answer the user's question about our ecosystem, family tree, vision, or services.
 
-OUR VISION:
-LBC Network is building the infrastructure for tomorrow's digital economy. We connect businesses, communities, and individuals through seamless technology solutions that transcend borders. Built in Canada, we're committed to serving the world through innovative, interconnected digital platforms.
+Context:
+- Vision: LBC Network is building infrastructure for tomorrow's digital economy, connecting businesses and communities globally from Canada.
+- Family Tree: Parent (lbc.network) → Big Son (lbchub.io) → Twins (lbc-hub.com, lbchub.site)
+- Services: Wallet, Marketplace, Driver Portal, LBCOS, Hardware, App Builder, Hub Travel, Lumina AI
 
-ECOSYSTEM OVERVIEW:
-The LBC Network ecosystem is a comprehensive digital infrastructure where multiple platforms and services work together under one unified vision. We believe in the power of interconnected solutions that create value for users globally.
-
-FAMILY TREE STRUCTURE:
-- Parent AI: lbc.network (The foundational parent AI powering the entire ecosystem)
-- Big Son: lbchub.io (LBC Protocol - The main hub connecting all services)
-- Twins: lbc-hub.com and lbchub.site (Twin platforms serving complementary purposes)
-
-CORE SERVICES:
-- Wallet: Secure digital transactions
-- Marketplace: Global commerce platform
-- Driver Portal: Logistics & delivery network
-- LBCOS: Advanced phone operating system
-- Hardware: Next-generation connected devices
-- App Builder: Build apps and websites with AI
-- Hub Travel: Complete travel booking service
-- Lumina AI: Intelligent AI twin for building apps and websites
-
-User question: ${input}
-
-Respond conversationally and helpfully. Answer questions about our vision, ecosystem structure, family tree relationships, and services.`
+User: ${input}`
       });
 
       const aiMessage = {
         id: messages.length + 2,
         role: 'assistant',
-        content: response.data
+        content: typeof response.data === 'string' ? response.data : JSON.stringify(response.data)
       };
 
       setMessages(prev => [...prev, aiMessage]);
     } catch (error) {
+      console.error('LBC AI Error:', error);
       const errorMessage = {
         id: messages.length + 2,
         role: 'assistant',
