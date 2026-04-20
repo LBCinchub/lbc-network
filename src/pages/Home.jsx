@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import FamilyTree from '@/components/FamilyTree';
+import FloatingChat from '@/components/FloatingChat';
 
 export default function Home() {
   const services = [
@@ -52,6 +53,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white overflow-hidden">
+      <FloatingChat />
       {/* Subtle gradient orbs */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-violet-600/10 to-transparent blur-3xl" />
