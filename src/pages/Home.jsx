@@ -44,7 +44,7 @@ export default function Home() {
     {
       icon: Sparkles,
       title: "Lumina AI",
-      description: "Your intelligent digital twin",
+      description: "AI twin for building apps and websites",
       href: "#lumina"
     }
   ];
