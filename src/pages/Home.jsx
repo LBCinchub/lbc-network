@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import FamilyTree from '@/components/FamilyTree';
 
 export default function Home() {
   const services = [
@@ -190,6 +191,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Family Tree */}
+      <FamilyTree />
 
       {/* Footer */}
       <footer className="relative z-10 py-12 border-t border-white/5">
