@@ -65,19 +65,13 @@ CORE SERVICES:
 
 User question: ${input}
 
-Respond conversationally and helpfully. Answer questions about our vision, ecosystem structure, family tree relationships, and services.`,
-        response_json_schema: {
-          type: 'object',
-          properties: {
-            response: { type: 'string' }
-          }
-        }
+Respond conversationally and helpfully. Answer questions about our vision, ecosystem structure, family tree relationships, and services.`
       });
 
       const aiMessage = {
         id: messages.length + 2,
         role: 'assistant',
-        content: response.data.response
+        content: response.data
       };
 
       setMessages(prev => [...prev, aiMessage]);
