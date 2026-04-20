@@ -45,6 +45,12 @@ export default function Home() {
     },
     {
       icon: Code,
+      title: "App Builder",
+      description: "Build apps and websites with AI",
+      href: "#app-builder"
+    },
+    {
+      icon: Sparkles,
       title: "Lumina AI",
       description: "AI twin for building apps and websites",
       href: "#lumina"
