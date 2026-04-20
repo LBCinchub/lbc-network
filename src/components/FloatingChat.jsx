@@ -7,13 +7,14 @@ export default function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
-      id: 1,
+      id: Date.now(),
       role: 'assistant',
       content: 'Hey! 👋 I\'m LBC AI. Ask me anything about LBC Network, our services, or our ecosystem!'
     }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const messageCountRef = useRef(2);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -29,12 +30,13 @@ export default function FloatingChat() {
     if (!input.trim()) return;
 
     const userMessage = {
-      id: messages.length + 1,
+      id: messageCountRef.current++,
       role: 'user',
       content: input
     };
 
     setMessages(prev => [...prev, userMessage]);
+    const question = input;
     setInput('');
     setIsLoading(true);
 
@@ -47,11 +49,11 @@ Context:
 - Family Tree: Parent (lbc.network) → Big Son (lbchub.io) → Twins (lbc-hub.com, lbchub.site)
 - Services: Wallet, Marketplace, Driver Portal, LBCOS, Hardware, App Builder, Hub Travel, Lumina AI
 
-User: ${input}`
+User: ${question}`
       });
 
       const aiMessage = {
-        id: messages.length + 2,
+        id: messageCountRef.current++,
         role: 'assistant',
         content: typeof response.data === 'string' ? response.data : JSON.stringify(response.data)
       };
@@ -60,7 +62,7 @@ User: ${input}`
     } catch (error) {
       console.error('LBC AI Error:', error);
       const errorMessage = {
-        id: messages.length + 2,
+        id: messageCountRef.current++,
         role: 'assistant',
         content: 'Sorry, I encountered an issue. Please try again.'
       };
