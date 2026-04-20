@@ -41,8 +41,7 @@ export default function FloatingChat() {
     setIsLoading(true);
 
     try {
-      console.log('Sending question:', question);
-      const response = await base44.integrations.Core.InvokeLLM({
+      const result = await base44.integrations.Core.InvokeLLM({
         prompt: `You are LBC AI, the intelligent digital assistant for LBC Network. Answer the user's question about our ecosystem, family tree, vision, or services.
 
 Context:
@@ -53,27 +52,27 @@ Context:
 User: ${question}`
       });
 
-      console.log('Response received:', response);
-      
-      let content = 'No response received';
-      if (response && response.data) {
-        content = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
+      let content = 'Sorry, no response received';
+      if (result) {
+        if (typeof result === 'string') {
+          content = result;
+        } else if (result.data) {
+          content = typeof result.data === 'string' ? result.data : JSON.stringify(result.data);
+        }
       }
 
       const aiMessage = {
         id: messageCountRef.current++,
         role: 'assistant',
-        content: content
+        content
       };
 
-      console.log('Adding message:', aiMessage);
       setMessages(prev => [...prev, aiMessage]);
     } catch (error) {
-      console.error('LBC AI Error:', error.message, error);
       const errorMessage = {
         id: messageCountRef.current++,
         role: 'assistant',
-        content: `Error: ${error.message || 'Failed to get response'}`
+        content: 'Sorry, I encountered an error. Please try again.'
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {
