@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane } from 'lucide-react';
+import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Code } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import FamilyTree from '@/components/FamilyTree';
 import FloatingChat from '@/components/FloatingChat';
@@ -44,7 +44,7 @@ export default function Home() {
       href: "#hub-travel"
     },
     {
-      icon: Sparkles,
+      icon: Code,
       title: "Lumina AI",
       description: "AI twin for building apps and websites",
       href: "#lumina"
