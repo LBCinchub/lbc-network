@@ -52,14 +52,7 @@ Context:
 User: ${question}`
       });
 
-      let content = 'Sorry, no response received';
-      if (result) {
-        if (typeof result === 'string') {
-          content = result;
-        } else if (result.data) {
-          content = typeof result.data === 'string' ? result.data : JSON.stringify(result.data);
-        }
-      }
+      const content = result || 'Sorry, I could not generate a response.';
 
       const aiMessage = {
         id: messageCountRef.current++,
@@ -72,7 +65,7 @@ User: ${question}`
       const errorMessage = {
         id: messageCountRef.current++,
         role: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.'
+        content: `Error: ${error?.message || 'Something went wrong'}`
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {
