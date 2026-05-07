@@ -22,7 +22,7 @@ export default function Home() {
     {
       icon: Car,
       title: "Driver Portal",
-      description: "Logistics & delivery network",
+      description: "First platform that pays drivers up to 80% based on customer reviews — starting at 60%",
       href: "#driver"
     },
     {
