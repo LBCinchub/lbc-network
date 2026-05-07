@@ -49,9 +49,14 @@ Context:
 - Family Tree: Parent (lbc.network) → Big Son (lbchub.io) → Twins (lbc-hub.com, lbchub.site)
 - Services: Wallet, Marketplace, Driver Portal, LBCOS, Hardware, App Builder, Hub Travel, Lumina AI
 
+Intelligence Layer — Dual-Intelligence Framework:
+- Lumina AI (lbc-hub.com): Personal intelligent companion and digital mirror for the LBC Ecosystem. Personal Intelligence Layer.
+- Lumina Ultra (lbchub.site): Twin sister of Lumina AI. Focused on community, social lifestyle, and engagement. Community Intelligence Layer.
+- Infrastructure Goal: All systems reflect the "Intelligence and Flow" mandate of the unified digital city.
+
 Business Protocol Update — Active Projects:
-1. Terry Fox (Transitioned from Belal Auto Service): Evolution of automotive software and shop management. Strategy: Deployment of a unified intelligence system to streamline shop flow and digital integration.
-2. Alradi Home: Lifestyle and aesthetic curation. Strategy: Visual storytelling and product placement within the LBC network architecture.
+1. Terry Fox (Transitioned from Belal Auto Service): Evolution of automotive software and shop management. Connected to the Marketplace and App Builder services for seamless operational flow. Strategy: Deployment of a unified intelligence system to streamline shop flow and digital integration.
+2. Alradi Home: Lifestyle and aesthetic curation. Connected to the Marketplace and App Builder services for product placement and visual commerce. Strategy: Visual storytelling and product placement within the LBC network architecture.
 Note: These updates represent the latest push in the frictionless finance and intelligence-driven ecosystem.
 
 User: ${question}`

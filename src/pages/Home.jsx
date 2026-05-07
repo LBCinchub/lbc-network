@@ -16,7 +16,7 @@ export default function Home() {
     {
       icon: Store,
       title: "Marketplace",
-      description: "Global commerce platform",
+      description: "Terry Fox automotive & Alradi Home lifestyle — unified commerce hub",
       href: "#marketplace"
     },
     {
@@ -46,13 +46,13 @@ export default function Home() {
     {
       icon: Code,
       title: "App Builder",
-      description: "Build apps and websites with AI",
+      description: "Intelligence-driven builder powering Terry Fox, Alradi Home & beyond",
       href: "#app-builder"
     },
     {
       icon: Sparkles,
       title: "Lumina AI",
-      description: "AI twin for building apps and websites",
+      description: "Personal Intelligence Layer and Digital Mirror for the LBC Ecosystem",
       href: "#lumina"
     }
   ];
@@ -195,6 +195,46 @@ export default function Home() {
                   </div>
                 </motion.a>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Intelligence Layer */}
+      <section className="relative z-10 py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-24" />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-4">
+              Intelligence Layer
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Dual-Intelligence Framework</h2>
+            <p className="text-white/30 text-sm mb-12 max-w-xl">Intelligence and Flow — the mandate of the unified digital city.</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Lumina AI */}
+              <div className="p-8 rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-600/5 to-transparent hover:border-violet-500/40 transition-all duration-500">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
+                  <span className="text-xs uppercase tracking-[0.15em] text-violet-400">Lumina AI · lbc-hub.com</span>
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-2">Personal Intelligence</h3>
+                <p className="text-white/50 text-sm leading-relaxed">The resident personal intelligent companion and digital mirror. Lumina AI reflects, augments, and evolves with each individual within the LBC ecosystem.</p>
+              </div>
+
+              {/* Lumina Ultra */}
+              <div className="p-8 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-600/5 to-transparent hover:border-blue-500/40 transition-all duration-500">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+                  <span className="text-xs uppercase tracking-[0.15em] text-blue-400">Lumina Ultra · lbchub.site</span>
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-2">Community Intelligence</h3>
+                <p className="text-white/50 text-sm leading-relaxed">The twin sister focused on community, social lifestyle, and engagement. Lumina Ultra bridges individuals to the collective pulse of the LBC network.</p>
+              </div>
             </div>
           </motion.div>
         </div>
