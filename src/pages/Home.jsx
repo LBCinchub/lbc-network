@@ -200,6 +200,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Business Protocol Update */}
+      <section className="relative z-10 py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-24" />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-12 lg:mb-16">
+              Business Protocol Update
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Terry Fox */}
+              <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-2 h-2 rounded-full bg-violet-400" />
+                  <span className="text-xs uppercase tracking-[0.15em] text-violet-400">Project 01</span>
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-1">Terry Fox</h3>
+                <p className="text-white/30 text-sm mb-6">Transitioned from Belal Auto Service</p>
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Context</p>
+                    <p className="text-white/60 text-sm leading-relaxed">Evolution of automotive software and shop management.</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Strategy</p>
+                    <p className="text-white/60 text-sm leading-relaxed">Deployment of a unified intelligence system to streamline shop flow and digital integration.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Alradi Home */}
+              <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-2 h-2 rounded-full bg-blue-400" />
+                  <span className="text-xs uppercase tracking-[0.15em] text-blue-400">Project 02</span>
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-1">Alradi Home</h3>
+                <p className="text-white/30 text-sm mb-6">Lifestyle & Aesthetic Curation</p>
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Context</p>
+                    <p className="text-white/60 text-sm leading-relaxed">Lifestyle and aesthetic curation within the LBC ecosystem.</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Strategy</p>
+                    <p className="text-white/60 text-sm leading-relaxed">Visual storytelling and product placement within the LBC network architecture.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p className="mt-10 text-white/25 text-sm italic">
+              These updates represent the latest push in the frictionless finance and intelligence-driven ecosystem.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Family Tree */}
       <FamilyTree />
 
