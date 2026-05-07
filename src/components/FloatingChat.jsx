@@ -49,6 +49,11 @@ Context:
 - Family Tree: Parent (lbc.network) → Big Son (lbchub.io) → Twins (lbc-hub.com, lbchub.site)
 - Services: Wallet, Marketplace, Driver Portal, LBCOS, Hardware, App Builder, Hub Travel, Lumina AI
 
+Business Protocol Update — Active Projects:
+1. Terry Fox (Transitioned from Belal Auto Service): Evolution of automotive software and shop management. Strategy: Deployment of a unified intelligence system to streamline shop flow and digital integration.
+2. Alradi Home: Lifestyle and aesthetic curation. Strategy: Visual storytelling and product placement within the LBC network architecture.
+Note: These updates represent the latest push in the frictionless finance and intelligence-driven ecosystem.
+
 User: ${question}`
       });
 
