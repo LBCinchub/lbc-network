@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Code } from 'lucide-react';
+import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Wrench, Copy, Check, Twitter, Send, Github } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import FamilyTree from '@/components/FamilyTree';
 import FloatingChat from '@/components/FloatingChat';
 
+const MINT_ADDRESS = 'LBCxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+
 export default function Home() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(MINT_ADDRESS);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   const services = [
     {
       icon: Wallet,
@@ -44,17 +54,44 @@ export default function Home() {
       href: "#hub-travel"
     },
     {
-      icon: Code,
-      title: "App Builder",
-      description: "Intelligence-driven builder powering Terry Fox, Alradi Home & beyond",
-      href: "#app-builder"
+      icon: Wrench,
+      title: "LBC Auto",
+      description: "Intelligence-driven automotive management powering Terry Fox & beyond",
+      href: "#lbc-auto"
     },
     {
       icon: Sparkles,
-      title: "Lumina AI",
-      description: "Personal Intelligence Layer and Digital Mirror for the LBC Ecosystem",
-      href: "#lumina"
+      title: "$LBC Token",
+      description: "Native utility token on Solana — powering the LBC Digital City economy",
+      href: "#lbc-token"
     }
+  ];
+
+  const partners = [
+    {
+      name: "Kulipa",
+      tag: "NDA Signed",
+      description: "Strategic partnership formalised. Fintech integration aligned with LBC's frictionless finance mandate.",
+      color: "violet"
+    },
+    {
+      name: "Colosseum",
+      tag: "Ecosystem Partner",
+      description: "Recognised within the Solana Colosseum ecosystem. Accelerating $LBC's on-chain infrastructure.",
+      color: "blue"
+    },
+    {
+      name: "Superteam Canada",
+      tag: "Community",
+      description: "Active member of Superteam Canada — bridging Canadian innovation with the global Solana network.",
+      color: "green"
+    }
+  ];
+
+  const socialLinks = [
+    { icon: Twitter, href: "https://x.com/lbcnetwork", label: "X" },
+    { icon: Send, href: "https://t.me/lbcnetwork", label: "Telegram" },
+    { icon: Github, href: "https://github.com/LBCinchub", label: "GitHub" },
   ];
 
   return (
@@ -86,11 +123,19 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
+              className="flex items-center gap-2"
             >
+              {socialLinks.map(({ icon: Icon, href, label }) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer">
+                  <Button variant="ghost" size="icon" className="text-white/50 hover:text-white hover:bg-white/5 transition-colors w-9 h-9">
+                    <Icon className="w-4 h-4" />
+                  </Button>
+                </a>
+              ))}
               <a href="https://lbchub.support" target="_blank" rel="noopener noreferrer">
                 <Button 
                   variant="ghost" 
-                  className="text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  className="text-white/70 hover:text-white hover:bg-white/5 transition-colors ml-2"
                 >
                   Contact
                 </Button>
@@ -112,9 +157,9 @@ export default function Home() {
             <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] tracking-tight">
               <span className="text-white">LBC Network</span>
               <span className="block mt-2 bg-gradient-to-r from-violet-400 via-blue-400 to-violet-400 bg-clip-text text-transparent">
-                —Connecting Innovation
+                —Building the Digital City
               </span>
-              <span className="block text-white/90">from Canada to the World.</span>
+              <span className="block text-white/90">from Ottawa to the World.</span>
             </h1>
           </motion.div>
 
@@ -125,9 +170,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-12 lg:mt-16 max-w-2xl text-lg lg:text-xl text-white/50 leading-relaxed font-light"
           >
-            Building the infrastructure for tomorrow's digital economy. 
-            We connect businesses, communities, and individuals through 
-            seamless technology solutions that transcend borders.
+            Building the infrastructure for tomorrow's digital economy — a unified Digital City powered by Solana, rooted in Ottawa, and built for the world. We connect businesses, communities, and individuals through intelligence-driven technology that transcends borders.
           </motion.p>
 
           {/* CTA Button */}
@@ -200,6 +243,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* $LBC Token Section */}
+      <section id="lbc-token" className="relative z-10 py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-24" />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-4">On-Chain</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">$LBC Token</h2>
+            <p className="text-white/30 text-sm mb-12 max-w-xl">Native utility token powering the LBC Digital City — built on Solana.</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+              <div className="p-6 rounded-2xl border border-white/5 bg-white/[0.02]">
+                <p className="text-xs uppercase tracking-widest text-white/20 mb-2">Network</p>
+                <p className="text-white font-semibold text-lg">Solana</p>
+              </div>
+              <div className="p-6 rounded-2xl border border-white/5 bg-white/[0.02]">
+                <p className="text-xs uppercase tracking-widest text-white/20 mb-2">Total Supply</p>
+                <p className="text-white font-semibold text-lg">1,000,000,000</p>
+              </div>
+              <div className="p-6 rounded-2xl border border-white/5 bg-white/[0.02]">
+                <p className="text-xs uppercase tracking-widest text-white/20 mb-2">Ticker</p>
+                <p className="text-white font-semibold text-lg">$LBC</p>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl border border-violet-500/20 bg-gradient-to-r from-violet-600/5 to-transparent flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <div className="flex-1">
+                <p className="text-xs uppercase tracking-widest text-white/20 mb-2">Mint Address</p>
+                <p className="text-white/70 text-sm font-mono break-all">{MINT_ADDRESS}</p>
+              </div>
+              <button
+                onClick={handleCopy}
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white/60 hover:text-white transition-all duration-200 text-sm shrink-0"
+              >
+                {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
+                {copied ? 'Copied' : 'Copy'}
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Intelligence Layer */}
       <section className="relative z-10 py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -212,7 +300,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-4">
               Intelligence Layer
             </p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Dual-Intelligence Framework</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">LBC Brain — Dual-Intelligence Framework</h2>
             <p className="text-white/30 text-sm mb-12 max-w-xl">Intelligence and Flow — the mandate of the unified digital city.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -220,7 +308,7 @@ export default function Home() {
               <div className="p-8 rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-600/5 to-transparent hover:border-violet-500/40 transition-all duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
-                  <span className="text-xs uppercase tracking-[0.15em] text-violet-400">Lumina AI · lbc-hub.com</span>
+                  <span className="text-xs uppercase tracking-[0.15em] text-violet-400">LBC Brain — Lumina AI · lbc-hub.com</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-2">Personal Intelligence</h3>
                 <p className="text-white/50 text-sm leading-relaxed">The resident personal intelligent companion and digital mirror. Lumina AI reflects, augments, and evolves with each individual within the LBC ecosystem.</p>
@@ -230,7 +318,7 @@ export default function Home() {
               <div className="p-8 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-600/5 to-transparent hover:border-blue-500/40 transition-all duration-500">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-                  <span className="text-xs uppercase tracking-[0.15em] text-blue-400">Lumina Ultra · lbchub.site</span>
+                  <span className="text-xs uppercase tracking-[0.15em] text-blue-400">LBC Brain — Lumina Ultra · lbchub.site</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-2">Community Intelligence</h3>
                 <p className="text-white/50 text-sm leading-relaxed">The twin sister focused on community, social lifestyle, and engagement. Lumina Ultra bridges individuals to the collective pulse of the LBC network.</p>
@@ -240,7 +328,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Business Protocol Update */}
+      {/* Portfolio */}
       <section className="relative z-10 py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-24" />
@@ -250,7 +338,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-12 lg:mb-16">
-              Business Protocol Update
+              Portfolio
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -302,20 +390,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Partners & Milestones */}
+      <section className="relative z-10 py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-24" />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-4">Traction</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">Partners & Milestones</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {partners.map((p) => (
+                <div key={p.name} className={`p-8 rounded-2xl border transition-all duration-500 ${
+                  p.color === 'violet' ? 'border-violet-500/20 bg-gradient-to-br from-violet-600/5 to-transparent hover:border-violet-500/40' :
+                  p.color === 'blue' ? 'border-blue-500/20 bg-gradient-to-br from-blue-600/5 to-transparent hover:border-blue-500/40' :
+                  'border-green-500/20 bg-gradient-to-br from-green-600/5 to-transparent hover:border-green-500/40'
+                }`}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`w-2 h-2 rounded-full ${
+                      p.color === 'violet' ? 'bg-violet-400' : p.color === 'blue' ? 'bg-blue-400' : 'bg-green-400'
+                    }`} />
+                    <span className={`text-xs uppercase tracking-[0.15em] ${
+                      p.color === 'violet' ? 'text-violet-400' : p.color === 'blue' ? 'text-blue-400' : 'text-green-400'
+                    }`}>{p.tag}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{p.name}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed">{p.description}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Family Tree */}
       <FamilyTree />
 
       {/* Footer */}
       <footer className="relative z-10 py-12 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/30 text-sm">
-              © 2026 LBC Network. All rights reserved.
-            </p>
-            <div className="flex items-center gap-1 text-white/30 text-sm">
-              <span>Built in</span>
-              <span className="text-white/50">Canada</span>
-              <span className="ml-1">🍁</span>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col items-center md:items-start gap-1">
+              <p className="text-white/30 text-sm">© 2026 LBC Network. All rights reserved.</p>
+              <a href="mailto:tarek-samara@lbc-hub.com" className="text-white/20 hover:text-white/40 text-xs transition-colors">
+                tarek-samara@lbc-hub.com
+              </a>
+              <p className="text-white/20 text-xs">Ottawa, Canada 🍁</p>
+            </div>
+            <div className="flex items-center gap-3">
+              {[
+                { icon: Twitter, href: "https://x.com/lbcnetwork", label: "X" },
+                { icon: Send, href: "https://t.me/lbcnetwork", label: "Telegram" },
+                { icon: Github, href: "https://github.com/LBCinchub", label: "GitHub" },
+              ].map(({ icon: Icon, href, label }) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white/60 transition-colors">
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
