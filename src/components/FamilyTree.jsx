@@ -60,6 +60,13 @@ export default function FamilyTree() {
 
   const siteChildren = [
     {
+      href: "#lbc-smart",
+      domain: "LBC SMART MANAGEMENT",
+      description: "Intelligence-driven management systems",
+      cardClass: "border-emerald-400/40 bg-gradient-to-br from-emerald-600/10 to-transparent hover:border-emerald-300/60",
+      iconClass: "text-emerald-300", subClass: "text-emerald-400"
+    },
+    {
       href: "https://alradihome.ca",
       domain: "alradihome.ca",
       description: "Alradi Home — Luxury Furniture & Home Lifestyle",
@@ -72,13 +79,6 @@ export default function FamilyTree() {
       description: "LBC Auto — Terry Fox Auto Center",
       cardClass: "border-amber-400/40 bg-gradient-to-br from-amber-600/10 to-transparent hover:border-amber-300/60",
       iconClass: "text-amber-300", subClass: "text-amber-400"
-    },
-    {
-      href: "#lbc-smart",
-      domain: "LBC SMART MANAGEMENT",
-      description: "Intelligence-driven management systems",
-      cardClass: "border-emerald-400/40 bg-gradient-to-br from-emerald-600/10 to-transparent hover:border-emerald-300/60",
-      iconClass: "text-emerald-300", subClass: "text-emerald-400"
     },
   ];
 
