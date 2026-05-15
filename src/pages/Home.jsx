@@ -35,7 +35,8 @@ export default function Home() {
       icon: Car,
       title: "Driver Portal",
       description: "Industry's first driver earnings model — baseline 60% commission, scaling up to 80% based on customer satisfaction.",
-      href: "#driver"
+      href: "#driver",
+      badge: "BUILDING"
     },
     {
       icon: Cpu,
