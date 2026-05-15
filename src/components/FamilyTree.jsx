@@ -63,6 +63,8 @@ export default function FamilyTree() {
       href: "#lbc-smart",
       domain: "LBC SMART MANAGEMENT",
       description: "Intelligence-driven management systems",
+      badge: "LIVE",
+      greenBadge: true,
       cardClass: "border-emerald-400/40 bg-gradient-to-br from-emerald-600/10 to-transparent hover:border-emerald-300/60",
       iconClass: "text-emerald-300", subClass: "text-emerald-400"
     },

@@ -60,6 +60,7 @@ export default function Home() {
       title: "LBC Smart Management",
       description: "Intelligence-driven management systems",
       href: "#lbc-smart",
+      badge: "LIVE",
       builtBy: "lbchub.site"
     },
     {
