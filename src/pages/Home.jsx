@@ -33,7 +33,7 @@ export default function Home() {
     },
     {
       icon: Car,
-      title: "Driver Portal",
+      title: "LBC Driver Portal",
       description: "Industry's first driver earnings model — baseline 60% commission, scaling up to 80% based on customer satisfaction.",
       href: "#driver",
       badge: "BUILDING"
