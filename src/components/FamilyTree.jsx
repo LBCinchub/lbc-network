@@ -41,7 +41,7 @@ export default function FamilyTree() {
       iconClass: "text-cyan-300", subClass: "text-cyan-300"
     },
     {
-      href: "https://lumina-blockchain.com", domain: "lumina-blockchain.com", label: "LBC Wallet · $LBC Token",
+      href: "https://lumina-blockchain.com", domain: "LBC WALLET", label: "Solana · $LBC Token",
       definition: "LBC Wallet — Solana-native payments, $LBC token, and frictionless finance layer",
       badge: "BUILDING",
       cardClass: "border-yellow-400/50 bg-gradient-to-br from-yellow-600/20 to-transparent hover:border-yellow-300/80",
