@@ -18,8 +18,8 @@ export default function FamilyTree() {
 
   const extended = [
     {
-      href: "https://lbc-hub.com", domain: "lbc-hub.com", label: "Twin A · Lumina AI",
-      definition: "Twin A — Community Hub, Social Feed, Marketplace & Travel",
+      href: "https://lbc-hub.com", domain: "lbc-hub.com", label: "Hub Marketplace · Feed & Travel AI",
+      definition: "Hub Marketplace — Social Feed, Marketplace & Travel AI",
       badge: "LIVE",
       greenBadge: true,
       cardClass: "border-pink-400/50 bg-gradient-to-br from-pink-600/20 to-transparent hover:border-pink-300/80",
