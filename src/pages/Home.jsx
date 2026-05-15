@@ -67,7 +67,9 @@ export default function Home() {
       icon: Sparkles,
       title: "$LBC Token",
       description: "Native utility token on Solana — powering the LBC Digital City economy",
-      href: "#lbc-token"
+      href: "#lbc-token",
+      badge: "LIVE",
+      greenBadge: true
     }
   ];
 
