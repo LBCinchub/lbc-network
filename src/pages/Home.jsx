@@ -19,9 +19,10 @@ export default function Home() {
   const services = [
     {
       icon: Wallet,
-      title: "Wallet",
-      description: "Secure digital transactions",
-      href: "#wallet"
+      title: "LBC Wallet",
+      description: "Solana-native wallet and payment layer. $LBC token, USDC, and frictionless finance across the entire LBC ecosystem.",
+      href: "https://lumina-blockchain.com",
+      badge: "BUILDING"
     },
     {
       icon: Store,
@@ -229,6 +230,11 @@ export default function Home() {
                     
                     <h3 className="text-xl font-semibold text-white mb-2 flex items-center gap-2">
                       {service.title}
+                      {service.badge && (
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ borderColor: '#FBBF24', color: '#FBBF24' }}>
+                          {service.badge}
+                        </span>
+                      )}
                       <ChevronRight className="w-4 h-4 text-white/30 group-hover:text-violet-400 group-hover:translate-x-1 transition-all duration-300" />
                     </h3>
                     

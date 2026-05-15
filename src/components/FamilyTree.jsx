@@ -18,39 +18,41 @@ export default function FamilyTree() {
 
   const extended = [
     {
-      href: "https://lbc-hub.com", domain: "lbc-hub.com", label: "Lumina AI",
+      href: "https://lbc-hub.com", domain: "lbc-hub.com", label: "Twin A · Lumina AI",
       definition: "Twin A — Community Hub, Social Feed, Marketplace & Travel",
       cardClass: "border-pink-400/50 bg-gradient-to-br from-pink-600/20 to-transparent hover:border-pink-300/80",
       iconClass: "text-pink-300", subClass: "text-pink-300"
     },
     {
-      href: "https://lbchub.site", domain: "lbchub.site", label: "Lumina Ultra",
-      definition: "Twin B — Builder Platform & App Intelligence Engine",
+      href: "https://lbchub.site", domain: "lbchub.site", label: "Twin B · Lumina Ultra",
+      definition: "Twin B — Builder Engine · Powers 3 products",
       badge: "Powers 3 products ↓",
       cardClass: "border-orange-400/50 bg-gradient-to-br from-orange-600/20 to-transparent hover:border-orange-300/80",
       iconClass: "text-orange-300", subClass: "text-orange-300"
     },
     {
-      href: "https://lbchub.live", domain: "lbchub.live", label: "Live Hub",
+      href: "https://lbchub.live", domain: "lbchub.live", label: "Live Hub · Creator Economy",
       definition: "Live Hub — Creator Economy, NFT Tickets & Streaming",
       cardClass: "border-cyan-400/50 bg-gradient-to-br from-cyan-600/20 to-transparent hover:border-cyan-300/80",
       iconClass: "text-cyan-300", subClass: "text-cyan-300"
     },
     {
-      href: "https://lbchub.tech", domain: "lbchub.tech", label: "Tech Hub",
-      definition: "Tech Hub — LBC Auto, Shop Management Software",
-      cardClass: "border-emerald-400/50 bg-gradient-to-br from-emerald-600/20 to-transparent hover:border-emerald-300/80",
-      iconClass: "text-emerald-300", subClass: "text-emerald-300"
+      href: "https://lumina-blockchain.com", domain: "lumina-blockchain.com", label: "LBC Wallet · $LBC Token",
+      definition: "LBC Wallet — Solana-native payments, $LBC token, and frictionless finance layer",
+      badge: "BUILDING",
+      cardClass: "border-yellow-400/50 bg-gradient-to-br from-yellow-600/20 to-transparent hover:border-yellow-300/80",
+      iconClass: "text-yellow-300", subClass: "text-yellow-300",
+      goldBadge: true
     },
   ];
 
   const siteChildren = [
     {
-      href: "https://lbchub.tech",
-      domain: "lbchub.tech",
-      description: "LBC Auto — Smart Auto Repair Shop Software",
-      cardClass: "border-emerald-400/40 bg-gradient-to-br from-emerald-600/10 to-transparent hover:border-emerald-300/60",
-      iconClass: "text-emerald-300", subClass: "text-emerald-400"
+      href: "https://lumina-blockchain.com",
+      domain: "lumina-blockchain.com",
+      description: "LBC Wallet — $LBC payments & Solana wallet",
+      cardClass: "border-yellow-400/40 bg-gradient-to-br from-yellow-600/10 to-transparent hover:border-yellow-300/60",
+      iconClass: "text-yellow-300", subClass: "text-yellow-400"
     },
     {
       href: "https://alradihome.ca",
@@ -125,7 +127,7 @@ export default function FamilyTree() {
             <motion.div variants={itemVariants} className="flex flex-col items-center">
               <p className="text-white/30 text-sm mb-6">Extended Network</p>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
-                {extended.map(({ href, domain, label, definition, badge, cardClass, iconClass, subClass }) => (
+                {extended.map(({ href, domain, label, definition, badge, goldBadge, cardClass, iconClass, subClass }) => (
                   <div key={domain} className="flex flex-col items-center">
                     <a href={href} target="_blank" rel="noopener noreferrer" className="group cursor-pointer flex flex-col items-center">
                       <div className={`w-36 h-28 rounded-2xl border flex items-center justify-center transition-all duration-300 ${cardClass}`}>
@@ -137,7 +139,13 @@ export default function FamilyTree() {
                       </div>
                       <p className="text-white/25 text-xs mt-2 text-center max-w-[140px] leading-relaxed">{definition}</p>
                       {badge && (
-                        <span className="mt-2 px-2 py-0.5 rounded-full border text-[10px] tracking-wide font-bold" style={{ borderColor: '#00FFA3', color: '#00FFA3' }}>
+                        <span
+                          className="mt-2 px-2 py-0.5 rounded-full border text-[10px] tracking-wide font-bold"
+                          style={goldBadge
+                            ? { borderColor: '#FBBF24', color: '#FBBF24' }
+                            : { borderColor: '#00FFA3', color: '#00FFA3' }
+                          }
+                        >
                           {badge}
                         </span>
                       )}
