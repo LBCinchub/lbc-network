@@ -72,6 +72,8 @@ export default function FamilyTree() {
       href: "https://alradihome.ca",
       domain: "alradihome.ca",
       description: "Alradi Home — Luxury Furniture & Home Lifestyle",
+      badge: "LIVE",
+      greenBadge: true,
       cardClass: "border-rose-400/40 bg-gradient-to-br from-rose-600/10 to-transparent hover:border-rose-300/60",
       iconClass: "text-rose-300", subClass: "text-rose-400"
     },
@@ -79,6 +81,8 @@ export default function FamilyTree() {
       href: "https://lbchub.blog",
       domain: "terryfoxauto.ca",
       description: "LBC Auto — Terry Fox Auto Center",
+      badge: "LIVE",
+      greenBadge: true,
       cardClass: "border-amber-400/40 bg-gradient-to-br from-amber-600/10 to-transparent hover:border-amber-300/60",
       iconClass: "text-amber-300", subClass: "text-amber-400"
     },
