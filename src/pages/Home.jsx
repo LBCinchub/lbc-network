@@ -59,7 +59,7 @@ export default function Home() {
       icon: Cpu,
       title: "LBC Smart Management",
       description: "Intelligence-driven management systems",
-      href: "#lbc-smart",
+      href: "https://lbchub.tech",
       badge: "LIVE",
       builtBy: "lbchub.site"
     },

@@ -60,7 +60,7 @@ export default function FamilyTree() {
 
   const siteChildren = [
     {
-      href: "#lbc-smart",
+      href: "https://lbchub.tech",
       domain: "LBC SMART MANAGEMENT",
       description: "Intelligence-driven management systems",
       badge: "LIVE",
