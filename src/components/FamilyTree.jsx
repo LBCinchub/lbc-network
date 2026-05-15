@@ -69,8 +69,7 @@ export default function FamilyTree() {
     {
       href: "https://terryfoxauto.ca",
       domain: "terryfoxauto.ca",
-      description: "Terry Fox Auto Center — powered by lbchub.blog",
-      sublabel: null,
+      description: "LBC Auto — Terry Fox Auto Center",
       cardClass: "border-amber-400/40 bg-gradient-to-br from-amber-600/10 to-transparent hover:border-amber-300/60",
       iconClass: "text-amber-300", subClass: "text-amber-400"
     },
