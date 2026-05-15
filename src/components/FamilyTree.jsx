@@ -26,8 +26,8 @@ export default function FamilyTree() {
       iconClass: "text-pink-300", subClass: "text-pink-300"
     },
     {
-      href: "https://lbchub.site", domain: "lbchub.site", label: "Twin B · Lumina Ultra · LBC AI",
-      definition: "Twin B — Lumina Ultra · LBC AI · Builder Engine · Powers 3 products",
+      href: "https://lbchub.site", domain: "LBC AI", label: "Twin B · Lumina Ultra · Builder Engine",
+      definition: "Twin B — LBC AI · Lumina Ultra · Builder Engine · Powers 3 products",
       badge: "LIVE",
       greenBadge: true,
       cardClass: "border-orange-400/50 bg-gradient-to-br from-orange-600/20 to-transparent hover:border-orange-300/80",
