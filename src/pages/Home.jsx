@@ -56,16 +56,8 @@ export default function Home() {
       href: "#hub-travel"
     },
     {
-      icon: Cpu,
-      title: "LBC Smart Management",
-      description: "Intelligence-driven management systems",
-      href: "https://lbchub.tech",
-      badge: "LIVE",
-      builtBy: "lbchub.site"
-    },
-    {
       icon: Wrench,
-      title: "LBC Auto",
+      title: "LBC Auto Smart Management",
       description: "Intelligence-driven automotive management powering Terry Fox & beyond",
       href: "https://lbchub.blog",
       badge: "LIVE",
