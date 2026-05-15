@@ -148,17 +148,17 @@ export default function FamilyTree() {
               <div className="w-1 h-12 bg-gradient-to-b from-blue-400/50 to-transparent mt-4" />
             </motion.div>
 
-            {/* Extended Network */}
+            {/* Main Network */}
             <motion.div variants={itemVariants} className="flex flex-col items-center">
-              <p className="text-white/30 text-sm mb-6">Extended Network</p>
+              <p className="text-white/30 text-sm mb-6">LBC Network</p>
               <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 justify-items-center">
                 {extended.map(({ href, domain, label, definition, badge, goldBadge, greenBadge, cardClass, iconClass, subClass }) => (
                   <div key={domain} className="flex flex-col items-center">
                     <a href={href} target="_blank" rel="noopener noreferrer" className="group cursor-pointer flex flex-col items-center">
-                      <div className={`w-36 h-28 rounded-2xl border flex items-center justify-center transition-all duration-300 ${cardClass}`}>
+                      <div className={`w-44 h-36 rounded-2xl border flex items-center justify-center transition-all duration-300 ${cardClass}`}>
                         <div className="text-center px-2">
-                          <Globe className={`w-8 h-8 mx-auto mb-2 transition-colors ${iconClass}`} />
-                          <p className="text-xs font-semibold text-white">{domain}</p>
+                          <Globe className={`w-10 h-10 mx-auto mb-2 transition-colors ${iconClass}`} />
+                          <p className="text-sm font-bold text-white">{domain}</p>
                           <p className={`text-xs mt-1 ${subClass}`}>{label}</p>
                         </div>
                       </div>
