@@ -49,7 +49,7 @@ export default function FamilyTree() {
       goldBadge: true
     },
     {
-      href: "https://lbchub.org", domain: "lbchub.org", label: "Direct Charity Layer",
+      href: "https://lbchub.org", domain: "LBC CHARITY", label: "Direct Charity Layer",
       definition: "Zero fees, zero middleman — on-chain $LBC donations direct to recipient wallets",
       badge: "LIVE",
       cardClass: "border-green-400/50 bg-gradient-to-br from-green-600/20 to-transparent hover:border-green-300/80",
