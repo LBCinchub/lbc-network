@@ -56,6 +56,14 @@ export default function FamilyTree() {
       iconClass: "text-green-300", subClass: "text-green-300",
       greenBadge: true
     },
+    {
+      href: "https://lbchub.tech", domain: "LBC AUTO", label: "Smart Automotive Management",
+      definition: "Intelligence-driven floor software for automotive shops",
+      badge: "LIVE",
+      greenBadge: true,
+      cardClass: "border-emerald-400/50 bg-gradient-to-br from-emerald-600/20 to-transparent hover:border-emerald-300/80",
+      iconClass: "text-emerald-300", subClass: "text-emerald-300"
+    },
   ];
 
   const siteChildren = [
@@ -151,7 +159,7 @@ export default function FamilyTree() {
             {/* Main Network */}
             <motion.div variants={itemVariants} className="flex flex-col items-center">
               <p className="text-white/30 text-sm mb-6">LBC Network</p>
-              <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 justify-items-center">
+              <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 justify-items-center">
                 {extended.map(({ href, domain, label, definition, badge, goldBadge, greenBadge, cardClass, iconClass, subClass }) => (
                   <div key={domain} className="flex flex-col items-center">
                     <a href={href} target="_blank" rel="noopener noreferrer" className="group cursor-pointer flex flex-col items-center">
