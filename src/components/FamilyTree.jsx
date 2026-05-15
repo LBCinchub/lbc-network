@@ -34,8 +34,8 @@ export default function FamilyTree() {
       iconClass: "text-orange-300", subClass: "text-orange-300"
     },
     {
-      href: "https://lbchub.live", domain: "lbchub.live", label: "Live Hub · Creator Economy",
-      definition: "Live Hub — Creator Economy, NFT Tickets & Streaming",
+      href: "https://lbchub.live", domain: "LBC LIVE", label: "Live Hub · Creator Economy",
+      definition: "LBC LIVE — Creator Economy, NFT Tickets & Streaming",
       badge: "BUILDING",
       cardClass: "border-cyan-400/50 bg-gradient-to-br from-cyan-600/20 to-transparent hover:border-cyan-300/80",
       iconClass: "text-cyan-300", subClass: "text-cyan-300"
