@@ -69,8 +69,7 @@ export default function FamilyTree() {
       definition: "LBC Wallet — Solana-native payments, $LBC token, and frictionless finance layer",
       badge: "BUILDING",
       cardClass: "border-yellow-400/50 bg-gradient-to-br from-yellow-600/20 to-transparent hover:border-yellow-300/80",
-      iconClass: "text-yellow-300", subClass: "text-yellow-300",
-      goldBadge: true
+      iconClass: "text-yellow-300", subClass: "text-yellow-300"
     },
     {
       href: "#lbcos", domain: "LBCOS", label: "Core OS · Hardware Unlocked Next",
