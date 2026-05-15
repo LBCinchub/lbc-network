@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Wrench, Copy, Check, Twitter, Send, Github } from 'lucide-react';
+import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Wrench, Copy, Check, X, Send, Github } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import FamilyTree from '@/components/FamilyTree';
 import FloatingChat from '@/components/FloatingChat';
@@ -96,7 +96,7 @@ export default function Home() {
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: "https://x.com/LBC_FOUNDER", label: "X" },
+    { icon: X, href: "https://x.com/LBC_FOUNDER", label: "X" },
     { icon: Send, href: "https://t.me/LBCHUBofficial", label: "Telegram" },
     { icon: Github, href: "https://github.com/LBCinchub", label: "GitHub" },
   ];
@@ -458,8 +458,8 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-3">
               {[
-                { icon: Twitter, href: "https://x.com/lbcnetwork", label: "X" },
-                { icon: Send, href: "https://t.me/lbcnetwork", label: "Telegram" },
+                { icon: X, href: "https://x.com/LBC_FOUNDER", label: "X" },
+                { icon: Send, href: "https://t.me/LBCHUBofficial", label: "Telegram" },
                 { icon: Github, href: "https://github.com/LBCinchub", label: "GitHub" },
               ].map(({ icon: Icon, href, label }) => (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="text-white/30 hover:text-white/60 transition-colors">
