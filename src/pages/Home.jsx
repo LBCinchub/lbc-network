@@ -41,14 +41,16 @@ export default function Home() {
     {
       icon: Cpu,
       title: "LBCOS",
-      description: "Advanced phone operating system",
-      href: "#lbcos"
+      description: "The core OS being engineered from the ground up — once live, it unlocks LBC's own hardware era.",
+      href: "#lbcos",
+      badge: "BUILDING"
     },
     {
       icon: Smartphone,
-      title: "Hardware",
-      description: "Next-generation connected devices",
-      href: "#hardware"
+      title: "LBC Hardware",
+      description: "When LBCOS goes live, the hardware chapter begins — LBC-native devices built for the Digital City.",
+      href: "#hardware",
+      badge: "NEXT"
     },
     {
       icon: Plane,
