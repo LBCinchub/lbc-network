@@ -96,7 +96,7 @@ export default function Home() {
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: "https://x.com/lbcnetwork", label: "X" },
+    { icon: Twitter, href: "https://x.com/LBC_FOUNDER", label: "X" },
     { icon: Send, href: "https://t.me/LBCHUBofficial", label: "Telegram" },
     { icon: Github, href: "https://github.com/LBCinchub", label: "GitHub" },
   ];
