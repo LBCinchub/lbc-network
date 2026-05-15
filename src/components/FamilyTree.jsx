@@ -193,6 +193,8 @@ export default function FamilyTree() {
                             ? { borderColor: '#FBBF24', color: '#FBBF24' }
                             : greenBadge
                             ? { borderColor: '#4ADE80', color: '#4ADE80' }
+                            : badge === 'BUILDING'
+                            ? { borderColor: '#60A5FA', color: '#60A5FA' }
                             : { borderColor: '#00FFA3', color: '#00FFA3' }
                           }
                         >
