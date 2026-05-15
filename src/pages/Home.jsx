@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import FamilyTree from '@/components/FamilyTree';
 import FloatingChat from '@/components/FloatingChat';
 
-const MINT_ADDRESS = 'LBCxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+const MINT_ADDRESS = '2UoettzUUevYNNMhLYACqxjbvkpS4dnCZhbV6xFkuKkT';
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
