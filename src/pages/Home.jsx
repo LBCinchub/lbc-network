@@ -26,13 +26,6 @@ export default function Home() {
       greenBadge: true
     },
     {
-      icon: Wallet,
-      title: "LBC Wallet",
-      description: "Solana-native wallet and payment layer. $LBC token, USDC, and frictionless finance across the entire LBC ecosystem.",
-      href: "https://lumina-blockchain.com",
-      badge: "BUILDING"
-    },
-    {
       icon: Store,
       title: "Hub Marketplace",
       description: "lbc-hub.com — Social Feed, Marketplace & Travel AI",
@@ -46,6 +39,29 @@ export default function Home() {
       href: "https://lbchub.site",
       badge: "LIVE",
       greenBadge: true
+    },
+    {
+      icon: Wrench,
+      title: "LBC Auto Smart Management",
+      description: "Intelligence-driven automotive management powering Terry Fox & beyond",
+      href: "https://lbchub.blog",
+      badge: "LIVE",
+      builtBy: "lbchub.site"
+    },
+    {
+      icon: Sparkles,
+      title: "$LBC Token",
+      description: "Native utility token on Solana — powering the LBC Digital City economy",
+      href: "#lbc-token",
+      badge: "LIVE",
+      greenBadge: true
+    },
+    {
+      icon: Wallet,
+      title: "LBC Wallet",
+      description: "Solana-native wallet and payment layer. $LBC token, USDC, and frictionless finance across the entire LBC ecosystem.",
+      href: "https://lumina-blockchain.com",
+      badge: "BUILDING"
     },
     {
       icon: Car,
@@ -74,22 +90,6 @@ export default function Home() {
       description: "Full-service travel booking — flights, hotels, and experiences — integrated natively into the LBC ecosystem.",
       href: "#hub-travel",
       badge: "NEXT"
-    },
-    {
-      icon: Wrench,
-      title: "LBC Auto Smart Management",
-      description: "Intelligence-driven automotive management powering Terry Fox & beyond",
-      href: "https://lbchub.blog",
-      badge: "LIVE",
-      builtBy: "lbchub.site"
-    },
-    {
-      icon: Sparkles,
-      title: "$LBC Token",
-      description: "Native utility token on Solana — powering the LBC Digital City economy",
-      href: "#lbc-token",
-      badge: "LIVE",
-      greenBadge: true
     }
   ];
 
