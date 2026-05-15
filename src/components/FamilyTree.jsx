@@ -86,6 +86,14 @@ export default function FamilyTree() {
       cardClass: "border-amber-400/40 bg-gradient-to-br from-amber-600/10 to-transparent hover:border-amber-300/60",
       iconClass: "text-amber-300", subClass: "text-amber-400"
     },
+    {
+      href: "#driver",
+      domain: "LBC DRIVER PORTAL",
+      description: "Driver earnings & management platform",
+      badge: "BUILDING",
+      cardClass: "border-indigo-400/40 bg-gradient-to-br from-indigo-600/10 to-transparent hover:border-indigo-300/60",
+      iconClass: "text-indigo-300", subClass: "text-indigo-400"
+    },
   ];
 
   return (
