@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Wrench, Copy, Check, X, Send, Github, Brain } from 'lucide-react';
+import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Wrench, Copy, Check, X, Send, Github, Brain, Heart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import FamilyTree from '@/components/FamilyTree';
 import FloatingChat from '@/components/FloatingChat';
@@ -17,6 +17,14 @@ export default function Home() {
   };
 
   const services = [
+    {
+      icon: Heart,
+      title: "LBC Charity",
+      description: "Zero fees, zero middleman — on-chain $LBC donations direct to recipient wallets.",
+      href: "https://lbchub.org",
+      badge: "LIVE",
+      greenBadge: true
+    },
     {
       icon: Wallet,
       title: "LBC Wallet",
