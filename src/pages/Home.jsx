@@ -26,9 +26,10 @@ export default function Home() {
     },
     {
       icon: Store,
-      title: "Marketplace",
-      description: "Terry Fox automotive & Alradi Home lifestyle — unified commerce hub",
-      href: "#marketplace"
+      title: "Hub Marketplace",
+      description: "lbc-hub.com — Social Feed, Marketplace & Travel AI",
+      href: "https://lbc-hub.com",
+      badge: "LIVE"
     },
     {
       icon: Car,
