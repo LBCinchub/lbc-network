@@ -256,7 +256,13 @@ export default function Home() {
                     <h3 className="text-xl font-semibold text-white mb-2 flex items-center gap-2">
                       {service.title}
                       {service.badge && (
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full border" style={{ borderColor: '#FBBF24', color: '#FBBF24' }}>
+                        <span 
+                          className="text-[10px] font-bold px-2 py-0.5 rounded-full border" 
+                          style={{
+                            borderColor: service.badge === 'LIVE' ? '#4ADE80' : service.badge === 'BUILDING' ? '#3B82F6' : '#EF4444',
+                            color: service.badge === 'LIVE' ? '#4ADE80' : service.badge === 'BUILDING' ? '#3B82F6' : '#EF4444'
+                          }}
+                        >
                           {service.badge}
                         </span>
                       )}
