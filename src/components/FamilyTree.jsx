@@ -62,8 +62,8 @@ export default function FamilyTree() {
     {
       href: "https://terryfoxauto.ca",
       domain: "terryfoxauto.ca",
-      description: "Terry Fox Auto Blog — Coming Soon",
-      sublabel: "powered by lbchub.blog",
+      description: "Terry Fox Auto Center — powered by lbchub.blog",
+      sublabel: null,
       cardClass: "border-amber-400/40 bg-gradient-to-br from-amber-600/10 to-transparent hover:border-amber-300/60",
       iconClass: "text-amber-300", subClass: "text-amber-400"
     },
@@ -137,7 +137,7 @@ export default function FamilyTree() {
                       </div>
                       <p className="text-white/25 text-xs mt-2 text-center max-w-[140px] leading-relaxed">{definition}</p>
                       {badge && (
-                        <span className="mt-2 px-2 py-0.5 rounded-full border border-orange-400/30 text-orange-400/70 text-[10px] tracking-wide">
+                        <span className="mt-2 px-2 py-0.5 rounded-full border text-[10px] tracking-wide font-bold" style={{ borderColor: '#00FFA3', color: '#00FFA3' }}>
                           {badge}
                         </span>
                       )}
@@ -149,25 +149,19 @@ export default function FamilyTree() {
                         {/* dashed connector down */}
                         <div className="w-px h-8 border-l-2 border-dashed border-orange-400/30" />
                         <p className="text-white/20 text-[10px] uppercase tracking-widest mb-4">Built by lbchub.site</p>
-                        <div className="flex flex-col gap-3 items-center">
-                          {siteChildren.map(({ href: chHref, domain: chDomain, description, sublabel, cardClass: cc, iconClass: ic }) => (
-                            <div key={chDomain} className="flex flex-col items-center">
-                              {/* dashed line to child */}
-                              <div className="w-px h-4 border-l-2 border-dashed border-white/10" />
-                              <a href={chHref} target="_blank" rel="noopener noreferrer" className="group cursor-pointer flex flex-col items-center">
-                                <div className={`w-28 h-20 rounded-xl border flex items-center justify-center transition-all duration-300 ${cc}`}>
-                                  <div className="text-center px-2">
-                                    <Globe className={`w-5 h-5 mx-auto mb-1 ${ic}`} />
-                                    <p className="text-[10px] font-semibold text-white leading-tight">{chDomain}</p>
-                                  </div>
+                        <div className="flex flex-row gap-4 items-start justify-center flex-wrap">
+                          {siteChildren.map(({ href: chHref, domain: chDomain, description, cardClass: cc, iconClass: ic }) => (
+                            <a key={chDomain} href={chHref} target="_blank" rel="noopener noreferrer" className="group cursor-pointer flex flex-col items-center">
+                              <div className={`w-28 h-20 rounded-xl border flex items-center justify-center transition-all duration-300 ${cc}`}>
+                                <div className="text-center px-2">
+                                  <Globe className={`w-5 h-5 mx-auto mb-1 ${ic}`} />
+                                  <p className="text-[10px] font-semibold text-white leading-tight">{chDomain}</p>
                                 </div>
-                                <p className="text-white/25 text-[10px] mt-1 text-center max-w-[130px] leading-snug">{description}</p>
-                                {sublabel && (
-                                  <p className="text-white/15 text-[9px] mt-0.5 italic text-center">{sublabel}</p>
-                                )}
-                              </a>
-                            </div>
+                              </div>
+                              <p className="text-white/25 text-[10px] mt-1 text-center max-w-[110px] leading-snug">{description}</p>
+                            </a>
                           ))}
+
                         </div>
                       </div>
                     )}
