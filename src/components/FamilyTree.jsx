@@ -18,16 +18,16 @@ export default function FamilyTree() {
 
   const extended = [
     {
-      href: "https://lbc-hub.com", domain: "lbc-hub.com", label: "Twin A · Hub Marketplace · Feed & Travel AI",
-      definition: "Twin A — Hub Marketplace, Social Feed & Travel AI",
+      href: "https://lbc-hub.com", domain: "lbc-hub.com", label: "Twin A · Lumina AI · Hub Marketplace",
+      definition: "Twin A — Lumina AI · Hub Marketplace, Social Feed & Travel AI",
       badge: "LIVE",
       greenBadge: true,
       cardClass: "border-pink-400/50 bg-gradient-to-br from-pink-600/20 to-transparent hover:border-pink-300/80",
       iconClass: "text-pink-300", subClass: "text-pink-300"
     },
     {
-      href: "https://lbchub.site", domain: "lbchub.site", label: "Twin B · Builder Engine",
-      definition: "Twin B — Builder Engine · Powers 3 products",
+      href: "https://lbchub.site", domain: "lbchub.site", label: "Twin B · Lumina Ultra · LBC AI",
+      definition: "Twin B — Lumina Ultra · LBC AI · Builder Engine · Powers 3 products",
       badge: "LIVE",
       greenBadge: true,
       cardClass: "border-orange-400/50 bg-gradient-to-br from-orange-600/20 to-transparent hover:border-orange-300/80",
