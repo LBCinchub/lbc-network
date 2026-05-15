@@ -67,7 +67,7 @@ export default function Home() {
       icon: Wrench,
       title: "LBC Auto",
       description: "Intelligence-driven automotive management powering Terry Fox & beyond",
-      href: "https://terryfoxauto.ca",
+      href: "https://lbchub.blog",
       badge: "LIVE",
       builtBy: "lbchub.site"
     },

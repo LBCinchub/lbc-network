@@ -76,7 +76,7 @@ export default function FamilyTree() {
       iconClass: "text-rose-300", subClass: "text-rose-400"
     },
     {
-      href: "https://terryfoxauto.ca",
+      href: "https://lbchub.blog",
       domain: "terryfoxauto.ca",
       description: "LBC Auto — Terry Fox Auto Center",
       cardClass: "border-amber-400/40 bg-gradient-to-br from-amber-600/10 to-transparent hover:border-amber-300/60",
