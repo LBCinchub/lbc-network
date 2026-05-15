@@ -44,6 +44,14 @@ export default function FamilyTree() {
       iconClass: "text-yellow-300", subClass: "text-yellow-300",
       goldBadge: true
     },
+    {
+      href: "https://lbchub.org", domain: "lbchub.org", label: "Direct Charity Layer",
+      definition: "Zero fees, zero middleman — on-chain $LBC donations direct to recipient wallets",
+      badge: "LIVE",
+      cardClass: "border-green-400/50 bg-gradient-to-br from-green-600/20 to-transparent hover:border-green-300/80",
+      iconClass: "text-green-300", subClass: "text-green-300",
+      greenBadge: true
+    },
   ];
 
   const siteChildren = [
@@ -126,8 +134,8 @@ export default function FamilyTree() {
             {/* Extended Network */}
             <motion.div variants={itemVariants} className="flex flex-col items-center">
               <p className="text-white/30 text-sm mb-6">Extended Network</p>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
-                {extended.map(({ href, domain, label, definition, badge, goldBadge, cardClass, iconClass, subClass }) => (
+              <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 justify-items-center">
+                {extended.map(({ href, domain, label, definition, badge, goldBadge, greenBadge, cardClass, iconClass, subClass }) => (
                   <div key={domain} className="flex flex-col items-center">
                     <a href={href} target="_blank" rel="noopener noreferrer" className="group cursor-pointer flex flex-col items-center">
                       <div className={`w-36 h-28 rounded-2xl border flex items-center justify-center transition-all duration-300 ${cardClass}`}>
@@ -143,6 +151,8 @@ export default function FamilyTree() {
                           className="mt-2 px-2 py-0.5 rounded-full border text-[10px] tracking-wide font-bold"
                           style={goldBadge
                             ? { borderColor: '#FBBF24', color: '#FBBF24' }
+                            : greenBadge
+                            ? { borderColor: '#4ADE80', color: '#4ADE80' }
                             : { borderColor: '#00FFA3', color: '#00FFA3' }
                           }
                         >
