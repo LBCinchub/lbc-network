@@ -61,8 +61,8 @@ export default function FamilyTree() {
   const siteChildren = [
     {
       href: "https://lbchub.tech",
-      domain: "LBC SMART MANAGEMENT",
-      description: "Intelligence-driven management systems",
+      domain: "LBC AUTO",
+      description: "LBC Smart Management — Intelligence-driven floor software for automotive shops",
       badge: "LIVE",
       greenBadge: true,
       cardClass: "border-emerald-400/40 bg-gradient-to-br from-emerald-600/10 to-transparent hover:border-emerald-300/60",
