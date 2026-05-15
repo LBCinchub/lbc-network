@@ -60,7 +60,8 @@ export default function Home() {
       title: "LBC Auto",
       description: "Intelligence-driven automotive management powering Terry Fox & beyond",
       href: "https://terryfoxauto.ca",
-      badge: "LIVE"
+      badge: "LIVE",
+      builtBy: "lbchub.site"
     },
     {
       icon: Sparkles,
@@ -239,6 +240,10 @@ export default function Home() {
                       )}
                       <ChevronRight className="w-4 h-4 text-white/30 group-hover:text-violet-400 group-hover:translate-x-1 transition-all duration-300" />
                     </h3>
+                    
+                    {service.builtBy && (
+                      <p className="text-white/30 text-xs mb-2">Built by {service.builtBy}</p>
+                    )}
                     
                     <p className="text-white/40 font-light">
                       {service.description}
