@@ -71,6 +71,14 @@ export default function FamilyTree() {
       cardClass: "border-purple-400/50 bg-gradient-to-br from-purple-600/20 to-transparent hover:border-purple-300/80",
       iconClass: "text-purple-300", subClass: "text-purple-300"
     },
+    {
+      href: "https://lbchub.support", domain: "LBC SUPPORT", label: "Support & Resources",
+      definition: "Help, documentation, and customer support for the LBC ecosystem",
+      badge: "LIVE",
+      greenBadge: true,
+      cardClass: "border-cyan-400/50 bg-gradient-to-br from-cyan-600/20 to-transparent hover:border-cyan-300/80",
+      iconClass: "text-cyan-300", subClass: "text-cyan-300"
+    },
   ];
 
   const siteChildren = [
