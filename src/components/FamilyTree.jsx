@@ -64,6 +64,13 @@ export default function FamilyTree() {
       cardClass: "border-emerald-400/50 bg-gradient-to-br from-emerald-600/20 to-transparent hover:border-emerald-300/80",
       iconClass: "text-emerald-300", subClass: "text-emerald-300"
     },
+    {
+      href: "#lbcos", domain: "LBCOS", label: "Core OS · Hardware Unlocked Next",
+      definition: "The core OS being forged in the lab — once live, it opens the door to LBC's own hardware era",
+      badge: "BUILDING",
+      cardClass: "border-purple-400/50 bg-gradient-to-br from-purple-600/20 to-transparent hover:border-purple-300/80",
+      iconClass: "text-purple-300", subClass: "text-purple-300"
+    },
   ];
 
   const siteChildren = [
@@ -159,7 +166,7 @@ export default function FamilyTree() {
             {/* Main Network */}
             <motion.div variants={itemVariants} className="flex flex-col items-center">
               <p className="text-white/30 text-sm mb-6">LBC Network</p>
-              <div className="grid grid-cols-2 lg:grid-cols-6 gap-6 justify-items-center">
+              <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-6 justify-items-center">
                 {extended.map(({ href, domain, label, definition, badge, goldBadge, greenBadge, cardClass, iconClass, subClass }) => (
                   <div key={domain} className="flex flex-col items-center">
                     <a href={href} target="_blank" rel="noopener noreferrer" className="group cursor-pointer flex flex-col items-center">
