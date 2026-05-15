@@ -28,13 +28,15 @@ export default function FamilyTree() {
     {
       href: "https://lbchub.site", domain: "lbchub.site", label: "Twin B · Builder Engine",
       definition: "Twin B — Builder Engine · Powers 3 products",
-      badge: "Powers 3 products ↓",
+      badge: "LIVE",
+      greenBadge: true,
       cardClass: "border-orange-400/50 bg-gradient-to-br from-orange-600/20 to-transparent hover:border-orange-300/80",
       iconClass: "text-orange-300", subClass: "text-orange-300"
     },
     {
       href: "https://lbchub.live", domain: "lbchub.live", label: "Live Hub · Creator Economy",
       definition: "Live Hub — Creator Economy, NFT Tickets & Streaming",
+      badge: "BUILDING",
       cardClass: "border-cyan-400/50 bg-gradient-to-br from-cyan-600/20 to-transparent hover:border-cyan-300/80",
       iconClass: "text-cyan-300", subClass: "text-cyan-300"
     },
