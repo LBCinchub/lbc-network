@@ -27,7 +27,7 @@ export default function FamilyTree() {
     },
     {
       href: "https://lbchub.site", domain: "LBC AI", label: "Twin B · Lumina Ultra · Builder Engine",
-      definition: "Twin B — LBC AI · Lumina Ultra · Builder Engine · Powers 3 products",
+      definition: "Twin B · LBC AI · Powered by Lumina Ultra Builder Engine — Powers 3 live products: lbchub.tech, alradihome.ca, terryfoxauto.ca",
       badge: "LIVE",
       greenBadge: true,
       cardClass: "border-orange-400/50 bg-gradient-to-br from-orange-600/20 to-transparent hover:border-orange-300/80",
