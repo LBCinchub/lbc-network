@@ -58,13 +58,6 @@ export default function FamilyTree() {
 
   const siteChildren = [
     {
-      href: "https://lumina-blockchain.com",
-      domain: "lumina-blockchain.com",
-      description: "LBC Wallet — $LBC payments & Solana wallet",
-      cardClass: "border-yellow-400/40 bg-gradient-to-br from-yellow-600/10 to-transparent hover:border-yellow-300/60",
-      iconClass: "text-yellow-300", subClass: "text-yellow-400"
-    },
-    {
       href: "https://alradihome.ca",
       domain: "alradihome.ca",
       description: "Alradi Home — Luxury Furniture & Home Lifestyle",
