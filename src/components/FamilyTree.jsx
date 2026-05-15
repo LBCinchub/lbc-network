@@ -20,11 +20,13 @@ export default function FamilyTree() {
     {
       href: "https://lbc-hub.com", domain: "lbc-hub.com", label: "Twin A · Lumina AI",
       definition: "Twin A — Community Hub, Social Feed, Marketplace & Travel",
+      badge: "LIVE",
+      greenBadge: true,
       cardClass: "border-pink-400/50 bg-gradient-to-br from-pink-600/20 to-transparent hover:border-pink-300/80",
       iconClass: "text-pink-300", subClass: "text-pink-300"
     },
     {
-      href: "https://lbchub.site", domain: "lbchub.site", label: "Twin B · Lumina Ultra",
+      href: "https://lbchub.site", domain: "lbchub.site", label: "Twin B · Builder Engine",
       definition: "Twin B — Builder Engine · Powers 3 products",
       badge: "Powers 3 products ↓",
       cardClass: "border-orange-400/50 bg-gradient-to-br from-orange-600/20 to-transparent hover:border-orange-300/80",
