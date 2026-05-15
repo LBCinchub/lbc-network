@@ -55,8 +55,9 @@ export default function Home() {
     {
       icon: Plane,
       title: "Hub Travel",
-      description: "Complete travel booking service",
-      href: "#hub-travel"
+      description: "Full-service travel booking — flights, hotels, and experiences — integrated natively into the LBC ecosystem.",
+      href: "#hub-travel",
+      badge: "NEXT"
     },
     {
       icon: Wrench,
