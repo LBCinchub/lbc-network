@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Wrench, Copy, Check, X, Send, Github } from 'lucide-react';
+import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Wrench, Copy, Check, X, Send, Github, Brain } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import FamilyTree from '@/components/FamilyTree';
 import FloatingChat from '@/components/FloatingChat';
@@ -30,6 +30,14 @@ export default function Home() {
       description: "lbc-hub.com — Social Feed, Marketplace & Travel AI",
       href: "https://lbc-hub.com",
       badge: "LIVE"
+    },
+    {
+      icon: Brain,
+      title: "LBC AI",
+      description: "Lumina Ultra — The builder engine powering product development and intelligent automation across the LBC ecosystem.",
+      href: "https://lbchub.site",
+      badge: "LIVE",
+      greenBadge: true
     },
     {
       icon: Car,
