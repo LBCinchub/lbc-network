@@ -78,17 +78,17 @@ export default function Home() {
       badge: "BUILDING"
     },
     {
+      icon: Plane,
+      title: "LBC HUB TRAVEL",
+      description: "Full-service travel booking — flights, hotels, and experiences — integrated natively into the LBC ecosystem.",
+      href: "#hub-travel",
+      badge: "NEXT"
+    },
+    {
       icon: Smartphone,
       title: "LBC Hardware",
       description: "When LBCOS goes live, the hardware chapter begins — LBC-native devices built for the Digital City.",
       href: "#hardware",
-      badge: "NEXT"
-    },
-    {
-      icon: Plane,
-      title: "Hub Travel",
-      description: "Full-service travel booking — flights, hotels, and experiences — integrated natively into the LBC ecosystem.",
-      href: "#hub-travel",
       badge: "NEXT"
     }
   ];
