@@ -447,15 +447,50 @@ export default function Home() {
                   <span className="text-xs uppercase tracking-[0.15em] text-blue-400">Project 02</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-1">Alradi Home</h3>
-                <p className="text-white/30 text-sm mb-6">Lifestyle & Aesthetic Curation · Shipped selling online</p>
-                <div className="space-y-3">
+                <p className="text-white/30 text-sm">Home Services · Ottawa, ON</p>
+                <div className="flex flex-col gap-1 mb-6 mt-1">
+                  <p className="text-white/30 text-sm">📍 1530 Merivale Road, Ottawa, ON</p>
+                  <p className="text-white/30 text-sm">📞 613-769-2166</p>
+                  <p className="text-white/25 text-xs">TikTok: @alradi.home.inc · Facebook: Alradi Home</p>
+                </div>
+
+                <div className="space-y-4 mb-6">
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Context</p>
-                    <p className="text-white/60 text-sm leading-relaxed">Lifestyle and aesthetic curation within the LBC ecosystem.</p>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-2">The Challenge</p>
+                    <p className="text-white/60 text-sm leading-relaxed">No CRM, no invoicing system, no digital presence. Every customer interaction was manual, every invoice was handwritten, and marketing was inconsistent.</p>
                   </div>
+
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Strategy</p>
-                    <p className="text-white/60 text-sm leading-relaxed">Visual storytelling and product placement within the LBC network architecture.</p>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-2">What We Built</p>
+                    <ul className="text-white/60 text-sm space-y-1">
+                      <li>• Customer CRM — full client database with project history</li>
+                      <li>• Project Management — live job tracking, quote to completion</li>
+                      <li>• Professional Invoicing — branded invoices with tax calculations</li>
+                      <li>• Client Portal — customers view estimates & invoices online</li>
+                      <li>• Social Media Marketing — AI content for Facebook & TikTok</li>
+                      <li>• Digital Storefront — service catalog with online booking</li>
+                      <li>• Brand Identity — unified visual presence across all platforms</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-2">The Result</p>
+                    <p className="text-white/50 text-xs leading-relaxed italic">Alradi Home now runs a fully digital operation from a single dashboard. The owner focuses on delivering great home services — LBC Network handles everything behind the scenes.</p>
+                  </div>
+
+                  <div className="space-y-2 pt-2">
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <span className="text-green-400">✅</span>
+                      <span>Live & Active</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <span className="text-green-400">✅</span>
+                      <span>LBC Network AI-Powered Platform</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <span className="text-green-400">✅</span>
+                      <span>Managed by Lumina AI + Mokhtar Tarek Samara</span>
+                    </div>
                   </div>
                 </div>
               </a>
