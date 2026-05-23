@@ -391,7 +391,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-1">Terry Fox Auto Center</h3>
                 <div className="flex flex-col gap-1 mb-6">
-                  <a href="https://maps.google.com/?q=124+Rue+Principale,+Gatineau,+QC" target="_blank" rel="noopener noreferrer" className="text-white/50 text-sm hover:text-white/80 transition-colors">📍 124 Rue Principale, Gatineau, QC</a>
+                  <a href="https://maps.google.com/?q=124+Rue+Principale,+Gatineau,+QC" target="_blank" rel="noopener noreferrer" className="text-orange-400 text-sm hover:text-orange-300 transition-colors">📍 124 Rue Principale, Gatineau, QC</a>
                   <a href="https://wa.me/18194363007" target="_blank" rel="noopener noreferrer" className="text-green-400 text-sm font-medium hover:text-green-300 transition-colors">📞 +1 819-436-3007</a>
                   <a href="https://wa.me/18194363007" target="_blank" rel="noopener noreferrer" className="text-violet-400 text-sm font-medium hover:text-violet-300 transition-colors">🌐 TerryFoxAuto.ca</a>
                 </div>
@@ -450,7 +450,7 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold text-white mb-1">Alradi Home</h3>
                 <p className="text-white/30 text-sm">Home Services · Ottawa, ON</p>
                 <div className="flex flex-col gap-1 mb-6 mt-1">
-                  <a href="https://maps.google.com/?q=1530+Merivale+Road,+Ottawa,+ON" target="_blank" rel="noopener noreferrer" className="text-white/50 text-sm hover:text-white/80 transition-colors">📍 1530 Merivale Road, Ottawa, ON</a>
+                  <a href="https://maps.google.com/?q=1530+Merivale+Road,+Ottawa,+ON" target="_blank" rel="noopener noreferrer" className="text-orange-400 text-sm hover:text-orange-300 transition-colors">📍 1530 Merivale Road, Ottawa, ON</a>
                   <a href="https://wa.me/16137692166" target="_blank" rel="noopener noreferrer" className="text-green-400 text-sm font-medium hover:text-green-300 transition-colors">📞 +1 613-769-2166</a>
                   <p className="text-white/40 text-xs">TikTok: @alradi.home.inc · Facebook: Alradi Home</p>
                   <a href="https://alradihome.ca" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">🌐 AlRadiHome.ca</a>
