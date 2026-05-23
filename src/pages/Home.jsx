@@ -392,7 +392,8 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold text-white mb-1">Terry Fox Auto Center</h3>
                 <div className="flex flex-col gap-1 mb-6">
                   <p className="text-white/30 text-sm">124 Rue Principale, Gatineau, QC</p>
-                  <p className="text-white/30 text-sm">📞 819-436-3007 · <span className="text-violet-400">TerryFoxAuto.ca</span></p>
+                  <p className="text-white/30 text-sm">📞 819-436-3007</p>
+                  <p className="text-violet-400 text-sm font-medium">🌐 TerryFoxAuto.ca</p>
                 </div>
                 
                 <div className="space-y-4 mb-6">
