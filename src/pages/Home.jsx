@@ -451,8 +451,8 @@ export default function Home() {
                 <div className="flex flex-col gap-1 mb-6 mt-1">
                   <a href="https://maps.google.com/?q=1530+Merivale+Road,+Ottawa,+ON" target="_blank" rel="noopener noreferrer" className="text-orange-400 text-sm hover:text-orange-300 transition-colors">📍 1530 Merivale Road, Ottawa, ON</a>
                   <a href="https://wa.me/16137692166" target="_blank" rel="noopener noreferrer" className="text-green-400 text-sm font-medium hover:text-green-300 transition-colors">📞 +1 613-769-2166</a>
-                  <p className="text-white/40 text-xs">TikTok: @alradi.home.inc · Facebook: Alradi Home</p>
                   <a href="https://alradihome.ca" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">🌐 AlRadiHome.ca</a>
+                  <p className="text-white/40 text-xs">TikTok: @alradi.home.inc · Facebook: Alradi Home</p>
                 </div>
 
                 <div className="space-y-4 mb-6">
