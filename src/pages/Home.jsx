@@ -447,51 +447,27 @@ export default function Home() {
                   <div className="w-2 h-2 rounded-full bg-blue-400" />
                   <span className="text-xs uppercase tracking-[0.15em] text-blue-400">Project 02</span>
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-1">Alradi Home</h3>
-                <div className="flex flex-col gap-1 mb-6 mt-1">
+                <h3 className="text-2xl font-semibold text-white mb-4">Alradi Home</h3>
+                <p className="text-white/60 text-sm leading-relaxed mb-6">Ottawa, ON Luxury home furnishings store powered by Lumina AI. Personalized shopping experience, custom furniture requests, and full e-commerce infrastructure — built and managed by LBC Network.</p>
+                
+                <div className="flex flex-col gap-2 mb-6">
                   <a href="https://maps.google.com/?q=1530+Merivale+Road,+Ottawa,+ON" target="_blank" rel="noopener noreferrer" className="text-orange-400 text-sm hover:text-orange-300 transition-colors">📍 1530 Merivale Road, Ottawa, ON</a>
-                  <a href="https://wa.me/16137692166" target="_blank" rel="noopener noreferrer" className="text-green-400 text-sm font-medium hover:text-green-300 transition-colors">📞 +1 613-769-2166</a>
-                  <a href="https://alradihome.ca" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">🌐 AlRadiHome.ca</a>
+                  <div className="flex gap-4 text-sm">
+                    <a href="https://wa.me/16137692166" target="_blank" rel="noopener noreferrer" className="text-green-400 font-medium hover:text-green-300 transition-colors">📞 613-769-2166</a>
+                    <span className="text-white/40">|</span>
+                    <a href="https://alradihome.ca" target="_blank" rel="noopener noreferrer" className="text-blue-400 font-medium hover:text-blue-300 transition-colors">🌐 AlRadiHome.ca</a>
+                  </div>
                   <p className="text-white/40 text-xs">TikTok: @alradi.home.inc · Facebook: Alradi Home</p>
                 </div>
-
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-white/20 mb-2">The Challenge</p>
-                    <p className="text-white/60 text-sm leading-relaxed">No CRM, no invoicing system, no digital presence. Every customer interaction was manual, every invoice was handwritten, and marketing was inconsistent.</p>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-white/60 text-sm">
+                    <span className="text-green-400">✅</span>
+                    <span>Live & Active</span>
                   </div>
-
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-white/20 mb-2">What We Built</p>
-                    <ul className="text-white/60 text-sm space-y-1">
-                      <li>• Customer CRM — full client database with project history</li>
-                      <li>• Project Management — live job tracking, quote to completion</li>
-                      <li>• Professional Invoicing — branded invoices with tax calculations</li>
-                      <li>• Client Portal — customers view estimates & invoices online</li>
-                      <li>• Social Media Marketing — AI content for Facebook & TikTok</li>
-                      <li>• Digital Storefront — service catalog with online booking</li>
-                      <li>• Brand Identity — unified visual presence across all platforms</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-white/20 mb-2">The Result</p>
-                    <p className="text-white/50 text-xs leading-relaxed italic">Alradi Home now runs a fully digital operation from a single dashboard. The owner focuses on delivering great home services — LBC Network handles everything behind the scenes.</p>
-                  </div>
-
-                  <div className="space-y-2 pt-2">
-                    <div className="flex items-center gap-2 text-white/60 text-sm">
-                      <span className="text-green-400">✅</span>
-                      <span>Live & Active</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-white/60 text-sm">
-                      <span className="text-green-400">✅</span>
-                      <span>LBC Network AI-Powered Platform</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-white/60 text-sm">
-                      <span className="text-green-400">✅</span>
-                      <span>Managed by Lumina AI + Mokhtar Tarek Samara</span>
-                    </div>
+                  <div className="flex items-center gap-2 text-white/60 text-sm">
+                    <span className="text-green-400">✅</span>
+                    <span>Lumina AI-Powered E-Commerce</span>
                   </div>
                 </div>
               </a>
