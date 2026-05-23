@@ -453,7 +453,7 @@ export default function Home() {
                   <p className="text-white/30 text-sm">📍 1530 Merivale Road, Ottawa, ON</p>
                   <a href="https://wa.me/16137692166" target="_blank" rel="noopener noreferrer" className="text-white/30 text-sm hover:text-green-400 transition-colors">📞 +1 613-769-2166</a>
                   <p className="text-white/25 text-xs">TikTok: @alradi.home.inc · Facebook: Alradi Home</p>
-                  <a href="https://wa.me/16137692166" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">🌐 AlRadiHome.ca</a>
+                  <a href="https://alradihome.ca" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">🌐 AlRadiHome.ca</a>
                 </div>
 
                 <div className="space-y-4 mb-6">
