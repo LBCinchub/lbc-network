@@ -452,6 +452,7 @@ export default function Home() {
                   <p className="text-white/30 text-sm">📍 1530 Merivale Road, Ottawa, ON</p>
                   <p className="text-white/30 text-sm">📞 613-769-2166</p>
                   <p className="text-white/25 text-xs">TikTok: @alradi.home.inc · Facebook: Alradi Home</p>
+                  <p className="text-blue-400 text-sm font-medium">🌐 AlRadiHome.ca</p>
                 </div>
 
                 <div className="space-y-4 mb-6">
