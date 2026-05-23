@@ -384,7 +384,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Terry Fox */}
-              <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500">
+              <a href="https://terryfoxauto.ca" target="_blank" rel="noopener noreferrer" className="p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500 cursor-pointer group">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-2 h-2 rounded-full bg-violet-400" />
                   <span className="text-xs uppercase tracking-[0.15em] text-violet-400">Project 01</span>
@@ -401,10 +401,10 @@ export default function Home() {
                     <p className="text-white/60 text-sm leading-relaxed">Deployment of a unified intelligence system to streamline shop flow and digital integration.</p>
                   </div>
                 </div>
-              </div>
+              </a>
 
               {/* Alradi Home */}
-              <div className="p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500">
+              <a href="https://alradihome.ca" target="_blank" rel="noopener noreferrer" className="p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500 cursor-pointer group">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-2 h-2 rounded-full bg-blue-400" />
                   <span className="text-xs uppercase tracking-[0.15em] text-blue-400">Project 02</span>
@@ -421,7 +421,7 @@ export default function Home() {
                     <p className="text-white/60 text-sm leading-relaxed">Visual storytelling and product placement within the LBC network architecture.</p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <p className="mt-10 text-white/25 text-sm italic">
