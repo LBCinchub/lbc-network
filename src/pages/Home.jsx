@@ -389,16 +389,50 @@ export default function Home() {
                   <div className="w-2 h-2 rounded-full bg-violet-400" />
                   <span className="text-xs uppercase tracking-[0.15em] text-violet-400">Project 01</span>
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-1">Terry Fox</h3>
-                <p className="text-white/30 text-sm mb-6">Transitioned from Belal Auto Service · Shipped to TerryFoxAuto.ca</p>
-                <div className="space-y-3">
+                <h3 className="text-2xl font-semibold text-white mb-1">Terry Fox Auto Center</h3>
+                <p className="text-white/30 text-sm mb-6">Gatineau, QC — Shipped to TerryFoxAuto.ca</p>
+                
+                <div className="space-y-4 mb-6">
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Context</p>
-                    <p className="text-white/60 text-sm leading-relaxed">Evolution of automotive software and shop management.</p>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-2">Overview</p>
+                    <p className="text-white/60 text-sm leading-relaxed">We built and now manage their entire digital operation. Terry Fox Auto doesn't touch the software — we run it for them.</p>
                   </div>
+                  
                   <div>
-                    <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Strategy</p>
-                    <p className="text-white/60 text-sm leading-relaxed">Deployment of a unified intelligence system to streamline shop flow and digital integration.</p>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-2">What We Built</p>
+                    <ul className="text-white/60 text-sm space-y-1">
+                      <li>• Full fleet & repair management system</li>
+                      <li>• Customer CRM with vehicle history</li>
+                      <li>• Live repair orders, estimates & invoicing</li>
+                      <li>• AI-powered billing & professional invoice portal</li>
+                      <li>• Digital storefront with booking flow</li>
+                      <li>• AI-generated marketing & social media</li>
+                      <li>• Live website with appointment scheduling</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-white/20 mb-2">The LBC Network Model</p>
+                    <p className="text-white/50 text-xs leading-relaxed italic">We don't sell software and disappear. We embed into your business, build your infrastructure, and manage it — so you focus on the work, we handle the digital city behind it.</p>
+                  </div>
+                  
+                  <div className="space-y-2 pt-2">
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <span className="text-green-400">✅</span>
+                      <span>Infrastructure built for you</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <span className="text-green-400">✅</span>
+                      <span>AI running 24/7</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <span className="text-green-400">✅</span>
+                      <span>Marketing handled</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-white/60 text-sm">
+                      <span className="text-green-400">✅</span>
+                      <span>Data owned by you, managed by us</span>
+                    </div>
                   </div>
                 </div>
               </a>
