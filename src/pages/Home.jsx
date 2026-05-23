@@ -448,7 +448,6 @@ export default function Home() {
                   <span className="text-xs uppercase tracking-[0.15em] text-blue-400">Project 02</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-1">Alradi Home</h3>
-                <p className="text-white/30 text-sm">Home Services · Ottawa, ON</p>
                 <div className="flex flex-col gap-1 mb-6 mt-1">
                   <a href="https://maps.google.com/?q=1530+Merivale+Road,+Ottawa,+ON" target="_blank" rel="noopener noreferrer" className="text-orange-400 text-sm hover:text-orange-300 transition-colors">📍 1530 Merivale Road, Ottawa, ON</a>
                   <a href="https://wa.me/16137692166" target="_blank" rel="noopener noreferrer" className="text-green-400 text-sm font-medium hover:text-green-300 transition-colors">📞 +1 613-769-2166</a>
