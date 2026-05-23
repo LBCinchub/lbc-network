@@ -390,7 +390,7 @@ export default function Home() {
                   <span className="text-xs uppercase tracking-[0.15em] text-violet-400">Project 01</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-1">Terry Fox</h3>
-                <p className="text-white/30 text-sm mb-6">Transitioned from Belal Auto Service</p>
+                <p className="text-white/30 text-sm mb-6">Transitioned from Belal Auto Service · Shipped to TerryFoxAuto.ca</p>
                 <div className="space-y-3">
                   <div>
                     <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Context</p>
@@ -410,7 +410,7 @@ export default function Home() {
                   <span className="text-xs uppercase tracking-[0.15em] text-blue-400">Project 02</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-1">Alradi Home</h3>
-                <p className="text-white/30 text-sm mb-6">Lifestyle & Aesthetic Curation</p>
+                <p className="text-white/30 text-sm mb-6">Lifestyle & Aesthetic Curation · Shipped selling online</p>
                 <div className="space-y-3">
                   <div>
                     <p className="text-xs uppercase tracking-widest text-white/20 mb-1">Context</p>
