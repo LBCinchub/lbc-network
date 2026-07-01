@@ -42,11 +42,11 @@ export default function Home() {
     },
     {
       icon: Wrench,
-      title: "LBC Auto Smart Management",
-      description: "Intelligence-driven automotive management powering Terry Fox & beyond",
-      href: "https://lbchub.blog",
+      title: "LBC Auto",
+      description: "AI-powered shop management SaaS — repair orders, estimates, invoices & customer portal. $200/mo per shop.",
+      href: "https://lbchub.tech",
       badge: "LIVE",
-      builtBy: "lbchub.site"
+      builtBy: "lbchub.tech"
     },
     {
       icon: Sparkles,
