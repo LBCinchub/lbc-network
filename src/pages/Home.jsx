@@ -325,10 +325,20 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-12 lg:mb-16">
-              Core Services
-            </p>
-            
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 lg:mb-16">
+              <div>
+                <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-3">Core Ecosystem</p>
+                <h2 className="text-3xl lg:text-4xl font-bold text-white">What We're Building</h2>
+              </div>
+              <div className="flex gap-3 flex-wrap">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-green-400/30 text-green-400 text-xs font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block animate-pulse" />{" "}LIVE
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-blue-400/30 text-blue-400 text-xs font-semibold">BUILDING</span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-orange-400/30 text-orange-400 text-xs font-semibold">NEXT</span>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
               {services.map((service, index) => (
                 <motion.a
