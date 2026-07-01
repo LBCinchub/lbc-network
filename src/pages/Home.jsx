@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Wrench, Copy, Check, X, Send, Github, Brain, Heart } from 'lucide-react';
+import { ArrowRight, Wallet, Store, Car, Globe, ChevronRight, Cpu, Smartphone, Sparkles, Plane, Wrench, Copy, Check, X, Monitor, PenLine, BarChart3, Megaphone, BookOpen, Camera, Scale, Send, Github, Brain, Heart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import FamilyTree from '@/components/FamilyTree';
 import FloatingChat from '@/components/FloatingChat';
@@ -91,6 +91,73 @@ export default function Home() {
       href: "#hardware",
       badge: "NEXT"
     }
+  ];
+
+  const teamServices = [
+    {
+      icon: Monitor,
+      title: "Tech Support",
+      description: "Expert help with software, hardware, and IT infrastructure issues. Fast response, real solutions.",
+      href: "https://lbc-hub.com/Services",
+      price: "From $49/hr",
+      badge: "LIVE"
+    },
+    {
+      icon: PenLine,
+      title: "Freelance Skills",
+      description: "Access top freelance talent for writing, design, development, and more — on your schedule.",
+      href: "https://lbc-hub.com/Services",
+      price: "From $25/hr",
+      badge: "LIVE"
+    },
+    {
+      icon: BarChart3,
+      title: "Business Consultancy",
+      description: "Strategic guidance to scale your business, optimize operations, and unlock new revenue streams.",
+      href: "https://lbc-hub.com/Services",
+      price: "From $150/hr",
+      badge: "LIVE"
+    },
+    {
+      icon: Megaphone,
+      title: "Digital Marketing",
+      description: "Data-driven campaigns across social media, SEO, paid ads, and email to grow your brand.",
+      href: "https://lbc-hub.com/Services",
+      price: "From $500/mo",
+      badge: "LIVE"
+    },
+    {
+      icon: BookOpen,
+      title: "Education & Training",
+      description: "Upskill your team or yourself with expert-led courses, workshops, and mentorship programs.",
+      href: "https://lbc-hub.com/Services",
+      price: "From $75/session",
+      badge: "LIVE"
+    },
+    {
+      icon: Camera,
+      title: "Creative Production",
+      description: "Professional photo, video, and graphic design services that make your brand impossible to ignore.",
+      href: "https://lbc-hub.com/Services",
+      price: "From $200/day",
+      badge: "LIVE"
+    },
+    {
+      icon: Globe,
+      title: "Web Development",
+      description: "Custom websites and web apps built with modern tech — fast, responsive, and built to convert.",
+      href: "https://lbc-hub.com/Services",
+      price: "From $1,500",
+      badge: "LIVE"
+    },
+    {
+      icon: Scale,
+      title: "Legal & Compliance",
+      description: "Navigate contracts, compliance, and legal requirements with trusted advisors.",
+      href: "https://lbc-hub.com/Services",
+      price: "From $200/hr",
+      badge: "LIVE"
+    },
   ];
 
   const partners = [
@@ -277,6 +344,59 @@ export default function Home() {
                       {service.description}
                     </p>
                   </div>
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Team Services Section */}
+      <section className="relative z-10 py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-16" />
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-4">
+              Professional Services
+            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Services Built for Your Success
+            </h2>
+            <p className="text-white/40 mb-12 max-w-xl">
+              From tech support to business consultancy — connect with LBC experts who deliver results, fast.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+              {teamServices.map((svc, index) => (
+                <motion.a
+                  key={svc.title}
+                  href={svc.href}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 + index * 0.07 }}
+                  className="group relative p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/10 transition-all duration-500 flex flex-col gap-3"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-violet-600/20 transition-colors duration-500">
+                    <svc.icon className="w-5 h-5 text-white/50 group-hover:text-violet-400 transition-colors duration-500" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-white mb-1 flex items-center gap-2">
+                      {svc.title}
+                      {svc.badge && (
+                        <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full border border-green-400/40 text-green-400">
+                          {svc.badge}
+                        </span>
+                      )}
+                    </h3>
+                    <p className="text-white/35 text-sm font-light leading-relaxed">{svc.description}</p>
+                  </div>
+                  <p className="text-violet-400 text-xs font-semibold mt-auto pt-2 border-t border-white/5">
+                    {svc.price}
+                    <span className="text-white/20 ml-1">· via lbc-hub.com</span>
+                  </p>
                 </motion.a>
               ))}
             </div>
