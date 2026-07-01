@@ -273,7 +273,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-12 lg:mt-16"
           >
-            <a href="https://lbchub.io" target="_blank" rel="noopener noreferrer">
+            <a href="https://lbc-hub.com" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 className="group relative bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white border-0 px-8 py-6 text-base font-medium rounded-full transition-all duration-300 shadow-lg shadow-violet-500/20 hover:shadow-violet-500/30 hover:scale-[1.02]"
@@ -498,9 +498,18 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-12 lg:mb-16">
-              Portfolio
-            </p>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 lg:mb-16">
+              <div>
+                <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-3">Portfolio</p>
+                <h2 className="text-3xl lg:text-4xl font-bold text-white">Live Clients</h2>
+                <p className="text-white/35 text-sm mt-2 max-w-md">We build, deploy, and manage the full digital operation — so our clients focus on their craft.</p>
+              </div>
+              <div className="flex-shrink-0">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-600/10 border border-violet-500/20 text-violet-300 text-sm font-medium">
+                  2 Active Clients
+                </span>
+              </div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Terry Fox */}
@@ -644,7 +653,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-col items-center md:items-start gap-1">
-              <p className="text-white/30 text-sm">© 2026 LBC Network. All rights reserved.</p>
+              <p className="text-white/30 text-sm">© 2026 LBC Network Inc. All rights reserved.</p>
               <a href="mailto:tarek-samara@lbc-hub.com" className="text-white/20 hover:text-white/40 text-xs transition-colors">
                 tarek-samara@lbc-hub.com
               </a>
