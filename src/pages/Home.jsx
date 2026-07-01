@@ -225,10 +225,16 @@ export default function Home() {
                   </Button>
                 </a>
               ))}
+              <a href="https://lbc-hub.com" target="_blank" rel="noopener noreferrer" className="hidden md:block">
+                <Button variant="ghost" className="text-white/40 hover:text-white hover:bg-white/5 transition-colors text-sm">Hub</Button>
+              </a>
+              <a href="https://lbc-hub.com/Services" target="_blank" rel="noopener noreferrer" className="hidden md:block">
+                <Button variant="ghost" className="text-white/40 hover:text-white hover:bg-white/5 transition-colors text-sm">Services</Button>
+              </a>
               <a href="https://lbchub.support" target="_blank" rel="noopener noreferrer">
-                <Button 
-                  variant="ghost" 
-                  className="text-white/70 hover:text-white hover:bg-white/5 transition-colors ml-2"
+                <Button
+                  variant="ghost"
+                  className="text-white/70 hover:text-white border border-white/10 hover:border-white/20 rounded-xl transition-colors ml-2 text-sm"
                 >
                   Contact
                 </Button>
@@ -282,6 +288,26 @@ export default function Home() {
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </a>
+          </motion.div>
+
+          {/* Stats Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="mt-16 lg:mt-20 flex flex-wrap gap-8 lg:gap-14 border-t border-white/5 pt-10"
+          >
+            {[
+              { value: "10+", label: "Products Built" },
+              { value: "2", label: "Live Clients" },
+              { value: "15+", label: "GitHub Repos" },
+              { value: "$LBC", label: "On Solana" },
+            ].map((stat) => (
+              <div key={stat.label} className="flex flex-col gap-1">
+                <span className="text-2xl lg:text-3xl font-bold text-white">{stat.value}</span>
+                <span className="text-xs uppercase tracking-widest text-white/25">{stat.label}</span>
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>
