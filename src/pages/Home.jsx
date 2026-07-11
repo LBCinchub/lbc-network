@@ -162,18 +162,6 @@ export default function Home() {
 
   const partners = [
     {
-      name: "Kulipa",
-      tag: "NDA Signed",
-      description: "Strategic partnership formalised. Fintech integration aligned with LBC's frictionless finance mandate.",
-      color: "violet"
-    },
-    {
-      name: "Colosseum",
-      tag: "Ecosystem Partner",
-      description: "Recognised within the Solana Colosseum ecosystem. Accelerating $LBC's on-chain infrastructure.",
-      color: "blue"
-    },
-    {
       name: "Haj Rims & Tires",
       tag: "Active Profile",
       description: "Automotive rims & tires partner — part of the LBC Network active roster.",
