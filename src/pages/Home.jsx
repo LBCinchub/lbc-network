@@ -174,22 +174,16 @@ export default function Home() {
       color: "blue"
     },
     {
-      name: "Superteam Canada",
-      tag: "Community",
-      description: "Active member of Superteam Canada — bridging Canadian innovation with the global Solana network.",
-      color: "green"
-    },
-    {
-      name: "AKA",
-      tag: "Active Profile",
-      description: "Active partner in the LBC Network ecosystem.",
-      color: "violet"
-    },
-    {
       name: "Haj Rims & Tires",
       tag: "Active Profile",
       description: "Automotive rims & tires partner — part of the LBC Network active roster.",
       color: "blue"
+    },
+    {
+      name: "Belal Auto Services",
+      tag: "Active Client",
+      description: "Automotive service partner — part of the LBC Network active client roster.",
+      color: "green"
     }
   ];
 
