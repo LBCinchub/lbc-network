@@ -184,6 +184,12 @@ export default function Home() {
       tag: "Active Client",
       description: "Automotive service partner — part of the LBC Network active client roster.",
       color: "green"
+    },
+    {
+      name: "AKA Auto Group",
+      tag: "Active Client",
+      description: "Automotive group partner — part of the LBC Network active client roster.",
+      color: "violet"
     }
   ];
 
