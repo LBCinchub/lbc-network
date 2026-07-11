@@ -178,6 +178,18 @@ export default function Home() {
       tag: "Active Client",
       description: "Automotive group partner — part of the LBC Network active client roster.",
       color: "violet"
+    },
+    {
+      name: "Colosseum",
+      tag: "Ecosystem Partner",
+      description: "Recognised within the Solana Colosseum ecosystem. Accelerating $LBC's on-chain infrastructure.",
+      color: "blue"
+    },
+    {
+      name: "Terry Fox Auto",
+      tag: "Active Client",
+      description: "Automotive service partner — full digital operation built and managed by LBC Network.",
+      color: "violet"
     }
   ];
 
