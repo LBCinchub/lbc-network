@@ -178,6 +178,18 @@ export default function Home() {
       tag: "Community",
       description: "Active member of Superteam Canada — bridging Canadian innovation with the global Solana network.",
       color: "green"
+    },
+    {
+      name: "AKA",
+      tag: "Active Profile",
+      description: "Active partner in the LBC Network ecosystem.",
+      color: "violet"
+    },
+    {
+      name: "Haj Rims & Tires",
+      tag: "Active Profile",
+      description: "Automotive rims & tires partner — part of the LBC Network active roster.",
+      color: "blue"
     }
   ];
 
@@ -655,27 +667,38 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-sm uppercase tracking-[0.2em] text-white/30 mb-4">Traction</p>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">Partners & Milestones</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Partners & Milestones</h2>
+            <p className="text-white/35 text-sm mb-10 max-w-lg">An ever-growing roster of partners and active profiles across the LBC Network.</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {partners.map((p) => (
-                <div key={p.name} className={`p-8 rounded-2xl border transition-all duration-500 ${
-                  p.color === 'violet' ? 'border-violet-500/20 bg-gradient-to-br from-violet-600/5 to-transparent hover:border-violet-500/40' :
-                  p.color === 'blue' ? 'border-blue-500/20 bg-gradient-to-br from-blue-600/5 to-transparent hover:border-blue-500/40' :
-                  'border-green-500/20 bg-gradient-to-br from-green-600/5 to-transparent hover:border-green-500/40'
-                }`}>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-2 h-2 rounded-full ${
-                      p.color === 'violet' ? 'bg-violet-400' : p.color === 'blue' ? 'bg-blue-400' : 'bg-green-400'
-                    }`} />
-                    <span className={`text-xs uppercase tracking-[0.15em] ${
-                      p.color === 'violet' ? 'text-violet-400' : p.color === 'blue' ? 'text-blue-400' : 'text-green-400'
-                    }`}>{p.tag}</span>
+            {/* Ticker / Marquee */}
+            <div className="relative w-full overflow-hidden border-y border-white/5 py-6">
+              {/* edge fade masks */}
+              <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+
+              <div className="flex w-max animate-ticker gap-6">
+                {[...partners, ...partners].map((p, i) => (
+                  <div
+                    key={`${p.name}-${i}`}
+                    className={`flex-shrink-0 w-72 p-6 rounded-2xl border ${
+                      p.color === 'violet' ? 'border-violet-500/20 bg-gradient-to-br from-violet-600/5 to-transparent' :
+                      p.color === 'blue' ? 'border-blue-500/20 bg-gradient-to-br from-blue-600/5 to-transparent' :
+                      'border-green-500/20 bg-gradient-to-br from-green-600/5 to-transparent'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`w-2 h-2 rounded-full ${
+                        p.color === 'violet' ? 'bg-violet-400' : p.color === 'blue' ? 'bg-blue-400' : 'bg-green-400'
+                      }`} />
+                      <span className={`text-xs uppercase tracking-[0.15em] ${
+                        p.color === 'violet' ? 'text-violet-400' : p.color === 'blue' ? 'text-blue-400' : 'text-green-400'
+                      }`}>{p.tag}</span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{p.name}</h3>
+                    <p className="text-white/50 text-sm leading-relaxed">{p.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{p.name}</h3>
-                  <p className="text-white/50 text-sm leading-relaxed">{p.description}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
