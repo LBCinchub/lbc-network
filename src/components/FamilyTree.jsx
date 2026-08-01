@@ -28,7 +28,7 @@ export default function FamilyTree() {
     {
       id: "lbc-ai",
       href: "https://lbchub.site", domain: "LBC AI", label: "Twin B · Lumina Ultra · Builder Engine",
-      definition: "Twin B · LBC AI · Powered by Lumina Ultra Builder Engine — Powers 3 live products: lbchub.tech, alradihome.ca, terryfoxauto.ca",
+      definition: "Twin B · LBC AI · Powered by Lumina Ultra Builder Engine — LBC AI builder and intelligence platform for the LBC ecosystem.",
       badge: "LIVE",
       greenBadge: true,
       cardClass: "border-orange-400/50 bg-gradient-to-br from-orange-600/20 to-transparent hover:border-orange-300/80",
@@ -90,24 +90,6 @@ export default function FamilyTree() {
       greenBadge: true,
       cardClass: "border-emerald-400/40 bg-gradient-to-br from-emerald-600/10 to-transparent hover:border-emerald-300/60",
       iconClass: "text-emerald-300", subClass: "text-emerald-400"
-    },
-    {
-      href: "https://alradihome.ca",
-      domain: "Al Radi Home",
-      description: "Luxury furniture and home lifestyle, powered by the LBC ecosystem.",
-      badge: "LIVE",
-      greenBadge: true,
-      cardClass: "border-rose-400/40 bg-gradient-to-br from-rose-600/10 to-transparent hover:border-rose-300/60",
-      iconClass: "text-rose-300", subClass: "text-rose-400"
-    },
-    {
-      href: "https://lbchub.blog",
-      domain: "terryfoxauto.ca",
-      description: "LBC Auto — Terry Fox Auto Center · Shipped to TerryFoxAuto.ca",
-      badge: "LIVE",
-      greenBadge: true,
-      cardClass: "border-amber-400/40 bg-gradient-to-br from-amber-600/10 to-transparent hover:border-amber-300/60",
-      iconClass: "text-amber-300", subClass: "text-amber-400"
     },
     {
       href: "#driver",
@@ -208,7 +190,7 @@ export default function FamilyTree() {
                       <div className="flex flex-col items-center mt-2 w-full">
                         {/* dashed connector down */}
                         <div className="w-px h-8 border-l-2 border-dashed border-orange-400/30" />
-                        <p className="text-white/20 text-[10px] uppercase tracking-widest mb-4">Active LBC Network Users</p>
+                        <p className="text-white/20 text-[10px] uppercase tracking-widest mb-4">LBC Products</p>
                         <div className="flex flex-row gap-4 items-start justify-center flex-wrap">
                           {siteChildren.map(({ href: chHref, domain: chDomain, description, badge, greenBadge, cardClass: cc, iconClass: ic }) => (
                             <div key={chDomain} className="flex flex-col items-center">

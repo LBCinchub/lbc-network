@@ -54,10 +54,10 @@ Intelligence Layer — Dual-Intelligence Framework:
 - Lumina Ultra (lbchub.site): Twin sister of Lumina AI. Focused on community, social lifestyle, and engagement. Community Intelligence Layer.
 - Infrastructure Goal: All systems reflect the "Intelligence and Flow" mandate of the unified digital city.
 
-Business Protocol Update — Active Projects:
-1. Terry Fox Auto Center (124 Rue Principale, Gatineau, QC | 819-436-3007 | TerryFoxAuto.ca): Full digital operation built and managed by LBC Network. Services: fleet & repair management, CRM, live repair orders & invoicing, AI billing portal, digital storefront, booking flow, AI marketing, appointment scheduling. Terry Fox Auto doesn't touch the software — LBC runs it for them.
-2. Al Radi Home: Lifestyle and aesthetic curation. Connected to the Marketplace and App Builder services for product placement and visual commerce. Strategy: Visual storytelling and product placement within the LBC network architecture.
-Note: These updates represent the latest push in the frictionless finance and intelligence-driven ecosystem.
+Business Protocol Update — Active Clients & Partners (not LBC-owned products):
+1. Terry Fox Auto Center (124 Rue Principale, Gatineau, QC | 819-436-3007 | TerryFoxAuto.ca): An active client of LBC Network. Full digital operation built and managed by LBC Network. Services: fleet & repair management, CRM, live repair orders & invoicing, AI billing portal, digital storefront, booking flow, AI marketing, appointment scheduling. Terry Fox Auto is a client — LBC runs the digital operation for them.
+2. Al Radi Home (alradihome.ca): An active client of LBC Network. Luxury furniture and home lifestyle client — part of the LBC Network active client roster. Strategy: Visual storytelling and product placement within the LBC network architecture.
+Note: Terry Fox Auto and Al Radi Home are clients/partners of LBC Network, not LBC-owned ecosystem products. They appear in the Partners & Milestones roster, not in the LBC Network Family Tree.
 
 User: ${question}`
       });

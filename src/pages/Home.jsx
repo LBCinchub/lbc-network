@@ -190,6 +190,12 @@ export default function Home() {
       tag: "Active Client",
       description: "Automotive service partner — full digital operation built and managed by LBC Network.",
       color: "violet"
+    },
+    {
+      name: "Al Radi Home",
+      tag: "Active Client",
+      description: "Luxury furniture and home lifestyle client — part of the LBC Network active client roster.",
+      color: "blue"
     }
   ];
 
@@ -311,7 +317,7 @@ export default function Home() {
           >
             {[
               { value: "10+", label: "Products Built" },
-              { value: "2", label: "Live Clients" },
+              { value: String(partners.filter(p => p.tag === 'Active Client').length), label: "Live Clients" },
               { value: "15+", label: "GitHub Repos" },
               { value: "$LBC", label: "On Solana" },
             ].map((stat) => (
