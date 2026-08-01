@@ -56,7 +56,7 @@ Intelligence Layer — Dual-Intelligence Framework:
 
 Business Protocol Update — Active Projects:
 1. Terry Fox Auto Center (124 Rue Principale, Gatineau, QC | 819-436-3007 | TerryFoxAuto.ca): Full digital operation built and managed by LBC Network. Services: fleet & repair management, CRM, live repair orders & invoicing, AI billing portal, digital storefront, booking flow, AI marketing, appointment scheduling. Terry Fox Auto doesn't touch the software — LBC runs it for them.
-2. Alradi Home: Lifestyle and aesthetic curation. Connected to the Marketplace and App Builder services for product placement and visual commerce. Strategy: Visual storytelling and product placement within the LBC network architecture.
+2. Al Radi Home: Lifestyle and aesthetic curation. Connected to the Marketplace and App Builder services for product placement and visual commerce. Strategy: Visual storytelling and product placement within the LBC network architecture.
 Note: These updates represent the latest push in the frictionless finance and intelligence-driven ecosystem.
 
 User: ${question}`

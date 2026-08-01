@@ -26,6 +26,7 @@ export default function FamilyTree() {
       iconClass: "text-pink-300", subClass: "text-pink-300"
     },
     {
+      id: "lbc-ai",
       href: "https://lbchub.site", domain: "LBC AI", label: "Twin B · Lumina Ultra · Builder Engine",
       definition: "Twin B · LBC AI · Powered by Lumina Ultra Builder Engine — Powers 3 live products: lbchub.tech, alradihome.ca, terryfoxauto.ca",
       badge: "LIVE",
@@ -92,8 +93,8 @@ export default function FamilyTree() {
     },
     {
       href: "https://alradihome.ca",
-      domain: "alradihome.ca",
-      description: "Alradi Home — Luxury Furniture & Home Lifestyle · Shipped selling online",
+      domain: "Al Radi Home",
+      description: "Luxury furniture and home lifestyle, powered by the LBC ecosystem.",
       badge: "LIVE",
       greenBadge: true,
       cardClass: "border-rose-400/40 bg-gradient-to-br from-rose-600/10 to-transparent hover:border-rose-300/60",
@@ -174,8 +175,8 @@ export default function FamilyTree() {
             <motion.div variants={itemVariants} className="flex flex-col items-center">
               <p className="text-white/30 text-sm mb-6">LBC Network</p>
               <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-6 justify-items-center">
-                {extended.map(({ href, domain, label, definition, badge, goldBadge, greenBadge, cardClass, iconClass, subClass }) => (
-                  <div key={domain} className="flex flex-col items-center">
+                {extended.map(({ id, href, domain, label, definition, badge, goldBadge, greenBadge, cardClass, iconClass, subClass }) => (
+                  <div key={id || domain} className="flex flex-col items-center">
                     <a href={href} target="_blank" rel="noopener noreferrer" className="group cursor-pointer flex flex-col items-center">
                       <div className={`w-44 h-36 rounded-2xl border flex items-center justify-center transition-all duration-300 ${cardClass}`}>
                         <div className="text-center px-2">
@@ -202,12 +203,12 @@ export default function FamilyTree() {
                       )}
                     </a>
 
-                    {/* lbchub.site child products */}
-                    {domain === 'lbchub.site' && (
+                    {/* LBC AI active-user child products */}
+                    {id === 'lbc-ai' && (
                       <div className="flex flex-col items-center mt-2 w-full">
                         {/* dashed connector down */}
                         <div className="w-px h-8 border-l-2 border-dashed border-orange-400/30" />
-                        <p className="text-white/20 text-[10px] uppercase tracking-widest mb-4">Built by lbchub.site</p>
+                        <p className="text-white/20 text-[10px] uppercase tracking-widest mb-4">Active LBC Network Users</p>
                         <div className="flex flex-row gap-4 items-start justify-center flex-wrap">
                           {siteChildren.map(({ href: chHref, domain: chDomain, description, badge, greenBadge, cardClass: cc, iconClass: ic }) => (
                             <div key={chDomain} className="flex flex-col items-center">
