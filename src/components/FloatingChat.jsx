@@ -1,173 +1,167 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Loader2 } from 'lucide-react';
+import { MessageCircle, X, Send, Loader2, Sparkles } from 'lucide-react';
 import { base44 } from '@/api/base44Client';
+import { usePrefersReducedMotion } from '@/components/family-tree/hooks';
+
+const GUIDED = [
+  'What is live today?',
+  'Which LBC product fits my business?',
+  'How do I work with LBC?',
+];
+
+const WELCOME =
+  "Hi — I'm LBC AI. I can help you navigate the LBC ecosystem: what's live, which product fits your needs, and how to work with us.";
 
 export default function FloatingChat() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([
-    {
-      id: Date.now(),
-      role: 'assistant',
-      content: 'Hey! 👋 I\'m LBC AI. Ask me anything about LBC Network, our services, or our ecosystem!'
-    }
-  ]);
+  const [messages, setMessages] = useState([{ id: 0, role: 'assistant', content: WELCOME }]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const messageCountRef = useRef(2);
-  const messagesEndRef = useRef(null);
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const idRef = useRef(1);
+  const openBtnRef = useRef(null);
+  const panelRef = useRef(null);
+  const inputRef = useRef(null);
+  const scrollRef = useRef(null);
+  const reduced = usePrefersReducedMotion();
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    if (isOpen) {
+      inputRef.current?.focus();
+      const onKey = (e) => {
+        if (e.key === 'Escape') {
+          setIsOpen(false);
+          openBtnRef.current?.focus();
+        }
+      };
+      document.addEventListener('keydown', onKey);
+      return () => document.removeEventListener('keydown', onKey);
+    }
+  }, [isOpen]);
 
-  const handleSendMessage = async (e) => {
-    e.preventDefault();
-    if (!input.trim()) return;
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [messages, isLoading]);
 
-    const userMessage = {
-      id: messageCountRef.current++,
-      role: 'user',
-      content: input
-    };
-
-    setMessages(prev => [...prev, userMessage]);
-    const question = input;
+  const send = async (text) => {
+    const content = (text ?? input).trim();
+    if (!content || isLoading) return;
+    const userMsg = { id: idRef.current++, role: 'user', content };
+    setMessages((prev) => [...prev, userMsg]);
     setInput('');
     setIsLoading(true);
-
     try {
-      const result = await base44.integrations.Core.InvokeLLM({
-        prompt: `You are LBC AI, the intelligent digital assistant for LBC Network. Answer the user's question about our ecosystem, family tree, vision, or services.
-
-Context:
-- Vision: LBC Network is building infrastructure for tomorrow's digital economy, connecting businesses and communities globally from Canada.
-- Family Tree: Parent (lbc.network) → Big Son (lbchub.io) → Twins (lbc-hub.com, lbchub.site)
-- Services: Wallet, Marketplace, Driver Portal, LBCOS, Hardware, App Builder, Hub Travel, Lumina AI
-
-Intelligence Layer — Dual-Intelligence Framework:
-- Lumina AI (lbc-hub.com): Personal intelligent companion and digital mirror for the LBC Ecosystem. Personal Intelligence Layer.
-- Lumina Ultra (lbchub.site): Twin sister of Lumina AI. Focused on community, social lifestyle, and engagement. Community Intelligence Layer.
-- Infrastructure Goal: All systems reflect the "Intelligence and Flow" mandate of the unified digital city.
-
-Business Protocol Update — Active Clients & Partners (not LBC-owned products):
-1. Terry Fox Auto Center (124 Rue Principale, Gatineau, QC | 819-436-3007 | TerryFoxAuto.ca): An active client of LBC Network. Full digital operation built and managed by LBC Network. Services: fleet & repair management, CRM, live repair orders & invoicing, AI billing portal, digital storefront, booking flow, AI marketing, appointment scheduling. Terry Fox Auto is a client — LBC runs the digital operation for them.
-2. Al Radi Home (alradihome.ca): An active client of LBC Network. Luxury furniture and home lifestyle client — part of the LBC Network active client roster. Strategy: Visual storytelling and product placement within the LBC network architecture.
-Note: Terry Fox Auto and Al Radi Home are clients/partners of LBC Network, not LBC-owned ecosystem products. They appear in the Partners & Milestones roster, not in the LBC Network Family Tree.
-
-User: ${question}`
-      });
-
-      const content = result || 'Sorry, I could not generate a response.';
-
-      const aiMessage = {
-        id: messageCountRef.current++,
-        role: 'assistant',
-        content
-      };
-
-      setMessages(prev => [...prev, aiMessage]);
-    } catch (error) {
-      const errorMessage = {
-        id: messageCountRef.current++,
-        role: 'assistant',
-        content: `Error: ${error?.message || 'Something went wrong'}`
-      };
-      setMessages(prev => [...prev, errorMessage]);
+      const res = await base44.functions.invoke('lbcNetworkAi', { message: content });
+      const reply = res?.data?.reply || "I couldn't generate a response right now. Please try again or visit https://LBC-HUB.COM.";
+      setMessages((prev) => [...prev, { id: idRef.current++, role: 'assistant', content: reply }]);
+    } catch {
+      setMessages((prev) => [
+        ...prev,
+        { id: idRef.current++, role: 'assistant', content: "Something went wrong on my end. Please try again shortly or visit https://LBC-HUB.COM." },
+      ]);
     } finally {
       setIsLoading(false);
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    send();
+  };
+
   return (
     <>
-      {/* Floating Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-gradient-to-br from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 flex items-center justify-center shadow-lg shadow-violet-500/30 transition-all duration-300"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+      <button
+        ref={openBtnRef}
+        type="button"
+        onClick={() => setIsOpen((v) => !v)}
+        aria-expanded={isOpen}
+        aria-label={isOpen ? 'Close LBC AI chat' : 'Open LBC AI chat'}
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-gradient-to-br from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 flex items-center justify-center shadow-lg shadow-violet-500/20 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60"
       >
-        {isOpen ? (
-          <X className="w-6 h-6 text-white" />
-        ) : (
-          <MessageCircle className="w-6 h-6 text-white" />
-        )}
-      </motion.button>
+        {isOpen ? <X className="w-6 h-6 text-white" /> : <MessageCircle className="w-6 h-6 text-white" />}
+      </button>
 
-      {/* Chat Window */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-24 right-6 z-40 w-96 max-w-[calc(100vw-2rem)] rounded-2xl bg-[#0f0f0f] border border-white/10 shadow-2xl flex flex-col overflow-hidden"
-          >
-            {/* Header */}
-            <div className="bg-gradient-to-r from-violet-600/20 to-blue-600/20 border-b border-white/10 px-4 py-4">
-              <h3 className="text-white font-semibold flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                LBC AI
-              </h3>
-              <p className="text-white/40 text-xs mt-1">Ask about LBC Network</p>
-            </div>
+      {isOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="LBC AI chat"
+          ref={panelRef}
+          className="fixed bottom-24 right-6 z-40 w-[calc(100vw-3rem)] max-w-[400px] rounded-2xl bg-[#0f0f0f] border border-white/10 shadow-2xl flex flex-col overflow-hidden"
+          style={{ maxHeight: 'min(70vh, 560px)' }}
+        >
+          <div className="px-4 py-3 border-b border-white/10 flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-violet-300" />
+            <h3 className="text-white text-sm font-semibold">LBC AI</h3>
+            <span className="ml-auto text-[11px] text-white/35">Ecosystem navigator</span>
+          </div>
 
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-96 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
-              {messages.map(msg => (
-                <motion.div
-                  key={msg.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+          <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-3">
+            {messages.map((m) => (
+              <div key={m.id} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div
+                  className={`max-w-[85%] rounded-xl px-3.5 py-2 text-sm leading-relaxed ${
+                    m.role === 'user'
+                      ? 'bg-violet-600 text-white'
+                      : 'bg-white/5 text-white/80 border border-white/10'
+                  }`}
                 >
-                  <div
-                    className={`max-w-[80%] rounded-lg px-4 py-2 text-sm ${
-                      msg.role === 'user'
-                        ? 'bg-violet-600 text-white'
-                        : 'bg-white/5 text-white/80 border border-white/10'
-                    }`}
-                  >
-                    {msg.content}
-                  </div>
-                </motion.div>
-              ))}
-              {isLoading && (
-                <div className="flex justify-start">
-                  <div className="bg-white/5 border border-white/10 rounded-lg px-4 py-2">
-                    <Loader2 className="w-4 h-4 text-white/40 animate-spin" />
-                  </div>
+                  {m.content}
                 </div>
-              )}
-              <div ref={messagesEndRef} />
-            </div>
+              </div>
+            ))}
+            {isLoading && (
+              <div className="flex justify-start">
+                <div className="bg-white/5 border border-white/10 rounded-xl px-3.5 py-2">
+                  <Loader2 className="w-4 h-4 text-white/50 animate-spin" />
+                </div>
+              </div>
+            )}
+          </div>
 
-            {/* Input */}
-            <form onSubmit={handleSendMessage} className="border-t border-white/10 p-4 flex gap-2">
-              <input
-                type="text"
-                value={input}
-                onChange={e => setInput(e.target.value)}
-                placeholder="Ask about LBC..."
-                disabled={isLoading}
-                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-white/30 focus:outline-none focus:border-violet-500/50 disabled:opacity-50"
-              />
-              <button
-                type="submit"
-                disabled={isLoading || !input.trim()}
-                className="bg-violet-600 hover:bg-violet-500 disabled:opacity-50 text-white rounded-lg px-3 py-2 transition-colors"
-              >
-                <Send className="w-4 h-4" />
-              </button>
-            </form>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          {messages.length <= 2 && !isLoading && (
+            <div className="px-4 pb-2 flex flex-wrap gap-2">
+              {GUIDED.map((g) => (
+                <button
+                  key={g}
+                  type="button"
+                  onClick={() => send(g)}
+                  className="px-3 py-1.5 min-h-[36px] rounded-full border border-white/10 bg-white/[0.03] text-[11px] text-white/65 hover:text-white hover:bg-white/[0.06] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60"
+                >
+                  {g}
+                </button>
+              ))}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="border-t border-white/10 p-3 flex gap-2">
+            <label htmlFor="lbc-ai-input" className="sr-only">
+              Ask LBC AI
+            </label>
+            <input
+              id="lbc-ai-input"
+              ref={inputRef}
+              type="text"
+              value={input}
+              maxLength={500}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Ask about LBC..."
+              disabled={isLoading}
+              className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-white/30 focus:outline-none focus:border-violet-500/50 disabled:opacity-50"
+            />
+            <button
+              type="submit"
+              disabled={isLoading || !input.trim()}
+              aria-label="Send message"
+              className="w-10 h-10 shrink-0 rounded-lg bg-violet-600 hover:bg-violet-500 disabled:opacity-50 text-white flex items-center justify-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60"
+            >
+              <Send className="w-4 h-4" />
+            </button>
+          </form>
+        </div>
+      )}
     </>
   );
 }
