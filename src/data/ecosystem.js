@@ -16,6 +16,7 @@ export const CONTACT = {
   phone: '+1 613-314-1994',
   phoneHref: 'tel:+16133141994',
   portal: 'https://LBC-HUB.COM',
+  services: 'https://LBC-HUB.COM/Services',
 };
 
 export const SOCIAL = {

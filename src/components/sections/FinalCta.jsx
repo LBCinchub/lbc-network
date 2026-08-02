@@ -41,7 +41,7 @@ export default function FinalCta() {
                   {CONTACT.phone}
                 </a>
                 <a
-                  href={CONTACT.portal}
+                  href={CONTACT.services}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-between gap-3 px-5 h-12 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 hover:from-violet-500 hover:to-blue-500 text-white text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60"
