@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Github, ArrowUpRight } from 'lucide-react';
 import LbcLogo from '@/components/LbcLogo';
 import { usePrefersReducedMotion } from '@/components/family-tree/hooks';
-import { GITHUB_URL, SOCIAL } from '@/data/ecosystem';
+import { GITHUB_URL } from '@/data/ecosystem';
 
 const LINKS = [
   { label: 'Ecosystem', href: '#ecosystem' },
