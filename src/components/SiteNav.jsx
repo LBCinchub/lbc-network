@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Github, ArrowUpRight } from 'lucide-react';
+import LbcLogo from '@/components/LbcLogo';
 import { usePrefersReducedMotion } from '@/components/family-tree/hooks';
 import { GITHUB_URL, SOCIAL } from '@/data/ecosystem';
 
@@ -53,9 +54,7 @@ export default function SiteNav() {
         aria-label="Primary"
       >
         <a href="#top" className="flex items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/60 rounded-lg px-1">
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-blue-500 flex items-center justify-center" aria-hidden="true">
-            <span className="w-2 h-2 rounded-full bg-white" />
-          </span>
+          <LbcLogo size="sm" priority />
           <span className="text-base font-semibold tracking-tight text-white">LBC Network</span>
         </a>
 

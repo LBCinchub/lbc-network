@@ -12,6 +12,7 @@ import Partners from '@/components/sections/Partners';
 import FinalCta from '@/components/sections/FinalCta';
 import { SOCIAL } from '@/data/ecosystem';
 import { Github, Send, X } from 'lucide-react';
+import LbcLogo from '@/components/LbcLogo';
 
 export default function Home() {
   return (
@@ -46,7 +47,8 @@ export default function Home() {
 
       <footer className="relative z-10 border-t border-white/10 py-10">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-5">
-          <div className="flex flex-col items-center md:items-start gap-1 text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+            <LbcLogo size="md" />
             <p className="text-white/40 text-sm font-semibold">LBC Network Inc.</p>
             <p className="text-white/30 text-xs">Ottawa, Canada</p>
             <p className="text-white/25 text-xs">&copy; {new Date().getFullYear()} LBC Network Inc.</p>

@@ -1,0 +1,24 @@
+{
+  "name": "LBC Network",
+  "short_name": "LBC Network",
+  "description": "LBC Network Inc. is an Ottawa-based technology company building a connected digital economy.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "https://base44.app/api/apps/699cff0a14d0376abefd6bc9/files/mp/public/699cff0a14d0376abefd6bc9/59db6f428_lbc-network-icon-192.png?v=1",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://base44.app/api/apps/699cff0a14d0376abefd6bc9/files/mp/public/699cff0a14d0376abefd6bc9/bafd4a47c_lbc-network-icon-512.png?v=1",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
